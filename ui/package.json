@@ -1,0 +1,32 @@
+{
+  "name": "ui",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "format": "prettier --write .",
+    "typecheck": "nuxt typecheck"
+  },
+  "dependencies": {
+    "@comark/nuxt": "^0.6.2",
+    "@nuxt/fonts": "^0.14.0",
+    "@nuxtjs/i18n": "^10.6.0",
+    "@nuxtjs/seo": "5.3.11",
+    "@nuxtjs/strapi": "2.2.0",
+    "nuxt": "^4.5.2",
+    "vue": "^3.5.41",
+    "vue-router": "^5.2.0"
+  },
+  "packageManager": "pnpm@11.21.0",
+  "devDependencies": {
+    "@takumi-rs/core": "^2.6.0",
+    "@takumi-rs/wasm": "^2.6.0",
+    "nuxtseo-layer-devtools": "^5.3.11",
+    "typescript": "^5.9.3",
+    "vue-tsc": "^3.3.9"
+  }
+}

@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Env files
+.env
+.env.*
+!.env.example
+
+# Personal reference (not part of the project)
+/assets
+/mockups
+
+# OS
+.DS_Store
+.AppleDouble
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# IDE
+.idea
+.fleet
+nbproject
+
+# Logs
+*.log
+logs/
+pids/

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_milestones",
+  "info": {
+    "displayName": "Milestone",
+    "icon": "calendar",
+    "description": "One dated entry in the association's history"
+  },
+  "options": {},
+  "attributes": {
+    "year": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "body": {
+      "type": "text"
+    }
+  }
+}

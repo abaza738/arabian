@@ -1,0 +1,7 @@
+# Shell scripts run through `sh`, which treats a trailing CR as part of the
+# command: a hook fails with `$'\r': command not found`, and a CR on the shebang
+# makes Docker report the entrypoint itself as `no such file or directory`. Git
+# for Windows checks out with CRLF by default, so the line endings have to be
+# pinned here or both are broken for anyone who clones this template on Windows.
+.githooks/* text eol=lf
+*.sh text eol=lf

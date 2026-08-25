@@ -1,0 +1,143 @@
+{
+  "global": {
+    "siteName": "Arabian",
+    "siteDescription": "Arabian is a virtual airline flying a regional network across the Middle East. Fly our routes, file your reports, and share the flight deck with crew in every timezone.",
+    "wordmarkSub": "Virtual Airline",
+    "ribbonTagline": "Every seat filled by someone who wanted to be here.",
+    "location": "Amman, Jordan",
+    "pilotPortalUrl": "",
+    "pilotPortalLabel": "",
+    "ctaCards": [
+      {
+        "eyebrow": "New here",
+        "title": "Join the crew",
+        "body": "Sign up, pick a hub, and fly your first sector this week. No hour requirements and no interview.",
+        "buttonLabel": "Start your application",
+        "buttonUrl": "/join",
+        "variant": "accent"
+      }
+    ],
+    "socialLinks": [],
+    "footerLinks": [],
+    "contactEmail": "",
+    "contactPhone": "",
+    "contactAddress": "",
+    "showUnassignedInHubViews": false,
+    "defaultSeo": {
+      "metaTitle": "Arabian — Virtual Airline",
+      "metaDescription": "A regional virtual airline. Published schedule, shared fleet, crew in every timezone."
+    }
+  },
+
+  "home": {
+    "sections": [
+      {
+        "__component": "sections.hero",
+        "hero": {
+          "greeting": "Welcome aboard",
+          "headline": "Fly the network. <em>Keep the logbook.</em>",
+          "body": "A regional fleet, a published schedule, and a crew room that spans a dozen countries. Pick a route, fly it in your simulator, and file the report when you land.",
+          "primaryCta": { "label": "Join the crew", "url": "/join" },
+          "secondaryCta": { "label": "See the fleet", "url": "/fleet" },
+          "footnote": "Free to join. Any simulator. Any experience level."
+        }
+      },
+      {
+        "__component": "sections.ribbon",
+        "name": "Arabian",
+        "tagline": "Every seat filled by someone who wanted to be here."
+      },
+      {
+        "__component": "sections.feed",
+        "eyebrow": "Latest",
+        "title": "From the crew room",
+        "source": "articles",
+        "limit": 4,
+        "layout": "grid",
+        "ctaLabel": "All news",
+        "ctaUrl": "/news"
+      },
+      {
+        "__component": "sections.feed",
+        "eyebrow": "The fleet",
+        "title": "What we fly",
+        "source": "aircraft",
+        "limit": 3,
+        "layout": "grid",
+        "ctaLabel": "Full fleet",
+        "ctaUrl": "/fleet"
+      },
+      {
+        "__component": "sections.feed",
+        "eyebrow": "Calendar",
+        "title": "Next on the schedule",
+        "source": "events",
+        "limit": 3,
+        "layout": "list",
+        "ctaLabel": "Full calendar",
+        "ctaUrl": "/events"
+      },
+      {
+        "__component": "sections.stat-band",
+        "eyebrow": "Who we are",
+        "title": "A virtual airline, run by the people who fly it",
+        "body": "We are a group of flight simulator pilots flying a shared route network on a shared schedule. No subscriptions, no minimum hours, no gatekeeping — just a dispatch board, a fleet, and people who like flying the same aeroplanes you do.",
+        "linkLabel": "More about us",
+        "linkUrl": "/about",
+        "stats": [
+          { "value": "12", "label": "Aircraft in fleet" },
+          { "value": "48", "label": "Destinations served" },
+          { "value": "3", "label": "Operating hubs" },
+          { "value": "600+", "label": "Flights filed" }
+        ]
+      },
+      {
+        "__component": "sections.cta-band",
+        "cards": [
+          {
+            "eyebrow": "New here",
+            "title": "Join the crew",
+            "body": "Sign up, pick a hub, and fly your first sector this week. No hour requirements and no interview.",
+            "buttonLabel": "Start your application",
+            "buttonUrl": "/join",
+            "variant": "accent"
+          },
+          {
+            "eyebrow": "Already flying",
+            "title": "Route network",
+            "body": "Every sector we operate, the aircraft assigned to it, and the hub it departs from.",
+            "buttonLabel": "Browse the network",
+            "buttonUrl": "/network",
+            "variant": "support"
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "metaTitle": "Arabian — Virtual Airline",
+      "metaDescription": "A regional virtual airline. Published schedule, shared fleet, crew in every timezone."
+    }
+  },
+
+  "about": {
+    "title": "About Arabian",
+    "blocks": [],
+    "history": [],
+    "seo": {
+      "metaTitle": "About Arabian",
+      "metaDescription": "Who we are, how we fly, and how to join."
+    }
+  },
+
+  "categories": [],
+  "hubs": [],
+  "ranks": [],
+  "pilots": [],
+  "articles": [],
+  "events": [],
+  "announcements": [],
+  "fleet": [],
+  "destinations": [],
+  "documents": [],
+  "pages": []
+}

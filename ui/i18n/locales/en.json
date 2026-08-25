@@ -1,0 +1,177 @@
+{
+  "nav": {
+    "news": "News",
+    "events": "Events",
+    "about": "About",
+    "join": "Join Us",
+    "pilotLogin": "Crew Login",
+    "menu": "Menu",
+    "announcements": "Noticeboard",
+    "fleet": "Fleet",
+    "network": "Network",
+    "roster": "Roster",
+    "documents": "Documents"
+  },
+  "sections": {
+    "featured": "Featured",
+    "latest": "Latest",
+    "recentNews": "Recent News",
+    "calendar": "Calendar",
+    "upcomingEvents": "Upcoming Events",
+    "whoWeAre": "Who We Are",
+    "aboutTitle": "About the airline",
+    "network": "Our network",
+    "hubs": "Hubs",
+    "noticeboard": "Noticeboard",
+    "whatWeFly": "What we fly",
+    "whereWeFly": "Where we fly",
+    "whoFlies": "Who flies with us",
+    "papers": "Papers",
+    "archive": "Archive"
+  },
+  "filters": {
+    "allCategories": "All",
+    "upcoming": "Upcoming",
+    "past": "Past"
+  },
+  "actions": {
+    "readMore": "Read more",
+    "readFeature": "Read the feature",
+    "viewAllArticles": "View all articles",
+    "viewFullCalendar": "View full calendar",
+    "learnMore": "Learn more about us",
+    "loadMore": "Load more"
+  },
+  "event": {
+    "when": "When",
+    "where": "Where",
+    "addToCalendar": "Add to calendar",
+    "allEvents": "All events",
+    "viewMap": "View on map",
+    "register": "Register",
+    "postponed": "Postponed",
+    "cancelled": "Cancelled",
+    "postponedNote": "Postponed — a new date will be announced.",
+    "cancelledNote": "This event has been cancelled."
+  },
+  "about": {
+    "crew": "Crew",
+    "crewEyebrow": "Who flies the line",
+    "history": "Our history",
+    "historyEyebrow": "How we got here",
+    "contact": "Contact",
+    "contactEyebrow": "Reach us",
+    "hubs": "Hubs",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "empty": "This page has not been written yet.",
+    "contributors": "Contributors",
+    "contributorsEyebrow": "Who writes here",
+    "present": "present"
+  },
+  "hub": {
+    "news": "News from this hub",
+    "events": "Events at this hub",
+    "noNews": "No articles from this hub yet.",
+    "noEvents": "Nothing on this hub's calendar right now.",
+    "noPastEvents": "This hub has not held an event yet.",
+    "allHubs": "All hubs",
+    "notFound": "That hub does not exist.",
+    "viewAllNews": "All news from this hub",
+    "viewAllEvents": "All events at this hub",
+    "pilots": "Based at this hub",
+    "fleet": "Based at this hub"
+  },
+  "roster": {
+    "hours": "{count} hours",
+    "since": "Since {year}"
+  },
+  "social": {
+    "followUs": "Follow us"
+  },
+  "footer": {
+    "pages": "Pages",
+    "connect": "Connect",
+    "location": "Location",
+    "rights": "All rights reserved.",
+    "partOf": "part of {site}"
+  },
+  "error": {
+    "title": "Something went wrong",
+    "body": "The page could not be loaded. Refresh to try again.",
+    "notFoundTitle": "Page not found",
+    "notFoundBody": "This page has moved or no longer exists.",
+    "home": "Go to the homepage"
+  },
+  "states": {
+    "newsFailed": "The news feed did not load. Refresh the page to try again.",
+    "eventsFailed": "The calendar did not load. Refresh the page to try again.",
+    "noArticles": "No articles have been published yet.",
+    "noArticlesInCategory": "Nothing in this category yet. Try another one.",
+    "noEvents": "Nothing on the calendar right now. Check back soon.",
+    "noPastEvents": "No events have taken place yet.",
+    "noAnnouncements": "Nothing on the noticeboard right now.",
+    "noAircraft": "No aircraft have been published yet.",
+    "noDestinations": "No destinations have been published yet.",
+    "noPilots": "No crew have been published yet.",
+    "noDocuments": "No documents have been published yet.",
+    "announcementsFailed": "The noticeboard did not load. Refresh the page to try again.",
+    "fleetFailed": "The fleet list did not load. Refresh the page to try again.",
+    "networkFailed": "The network list did not load. Refresh the page to try again.",
+    "rosterFailed": "The roster did not load. Refresh the page to try again.",
+    "documentsFailed": "The document list did not load. Refresh the page to try again."
+  },
+  "menu": {
+    "read": "Read",
+    "airline": "The airline",
+    "hubs": "Hubs",
+    "pages": "Pages",
+    "more": "More"
+  },
+  "announcement": {
+    "all": "All notices",
+    "pinned": "Pinned",
+    "kind": {
+      "notice": "Notice",
+      "notam": "NOTAM",
+      "ops": "Ops",
+      "urgent": "Urgent"
+    },
+    "expired": "This notice has expired and is kept only for reference."
+  },
+  "aircraft": {
+    "all": "Full fleet",
+    "type": "Type",
+    "registration": "Registration",
+    "livery": "Livery",
+    "seats": "Seats",
+    "range": "Range",
+    "cruise": "Cruise",
+    "base": "Based at",
+    "nm": "{value} nm",
+    "kt": "{value} kt",
+    "status": {
+      "active": "In service",
+      "incoming": "Joining the fleet",
+      "stored": "Stored",
+      "retired": "Retired"
+    }
+  },
+  "destination": {
+    "all": "Full network",
+    "icao": "ICAO",
+    "iata": "IATA"
+  },
+  "document": {
+    "category": {
+      "sop": "SOPs",
+      "chart": "Charts",
+      "livery": "Liveries",
+      "manual": "Manuals",
+      "form": "Forms",
+      "other": "Other"
+    },
+    "newTab": "opens in a new tab"
+  }
+}

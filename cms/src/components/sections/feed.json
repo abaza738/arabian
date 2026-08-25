@@ -1,0 +1,49 @@
+{
+  "collectionName": "components_sections_feeds",
+  "info": {
+    "displayName": "Feed",
+    "icon": "grid",
+    "description": "A bounded grid of entries from one collection, newest or first by order"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "source": {
+      "type": "enumeration",
+      "enum": [
+        "articles",
+        "events",
+        "aircraft",
+        "destinations",
+        "pilots",
+        "announcements",
+        "documents"
+      ],
+      "default": "articles",
+      "required": true
+    },
+    "limit": {
+      "type": "integer",
+      "default": 4,
+      "min": 1,
+      "max": 24
+    },
+    "layout": {
+      "type": "enumeration",
+      "enum": ["grid", "list"],
+      "default": "grid",
+      "required": true
+    },
+    "ctaLabel": {
+      "type": "string"
+    },
+    "ctaUrl": {
+      "type": "string"
+    }
+  }
+}

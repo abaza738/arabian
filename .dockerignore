@@ -1,0 +1,21 @@
+# Build context is the repo root for both images (pnpm workspace — the only
+# lockfile lives here), so this is the one ignore file Docker reads.
+node_modules
+**/node_modules
+.git
+.github
+docs
+
+# Build output
+cms/dist
+cms/build
+cms/.cache
+cms/.strapi
+cms/.tmp
+ui/.nuxt
+ui/.output
+
+# Secrets — never bake these into an image
+.env
+.env.*
+!.env.example

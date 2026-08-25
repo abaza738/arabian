@@ -1,0 +1,172 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Design tokens live in `tokens.css`. This file is the reset, the typefaces,
+   the element defaults and the handful of classes shared across components.
+
+   `--font-sans` comes from the Google Fonts link in `nuxt.config.ts`.
+   `--font-serif` (Marcellus, the brand's official English face) is
+   self-hosted from `ui/public/fonts/` via the `@font-face` below, and is
+   registered again under `fonts.families` in `nuxt.config.ts` so the OG share
+   card — which renders outside a browser — can reach it too. */
+
+@font-face {
+  font-family: 'Marcellus';
+  src: url('/fonts/Marcellus-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--color-surface);
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  font-weight: var(--weight-normal);
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-brand);
+}
+
+h1 {
+  font-size: var(--text-4xl);
+}
+
+h2 {
+  font-size: var(--text-3xl);
+}
+
+h3 {
+  font-size: var(--text-2xl);
+}
+
+h4 {
+  font-size: var(--text-xl);
+}
+
+h5 {
+  font-size: var(--text-lg);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card {
+  background: var(--color-surface-raised);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition:
+    box-shadow var(--transition),
+    transform var(--transition);
+  cursor: pointer;
+}
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.news-card-excerpt {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-normal);
+  font-weight: var(--weight-light);
+}
+
+.section-sup {
+  font-size: var(--text-3xs);
+  letter-spacing: var(--tracking-md);
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+  font-weight: var(--weight-normal);
+  margin-bottom: var(--space-1);
+}
+.month-heading {
+  position: sticky;
+  /* Not 0: that is behind the nav, which is opaque and outranks this on
+     z-index, so a stuck heading was simply invisible. */
+  top: var(--nav-stack-height);
+  z-index: var(--z-sticky);
+  margin: 0;
+  padding-block: var(--space-2-5) var(--space-2);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-normal);
+  letter-spacing: var(--tracking-md);
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+}
+.month-heading:not(:first-child) {
+  margin-top: var(--space-5);
+}
+
+/* Empty and failed states. Shared rather than scoped per page: both list pages
+   render the same shape of message and it should not drift between them. */
+.state-message {
+  padding-block: var(--space-10);
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+}
+
+.about-link {
+  color: var(--color-accent);
+  font-weight: var(--weight-normal);
+  font-size: var(--text-sm);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  transition: gap var(--transition);
+}
+.about-link:hover {
+  gap: var(--space-2);
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-ink-text);
+}
+
+/* Set by the mega menu while it is covering the viewport on a phone. Without
+   it the page behind scrolls under the open panel, which reads as the panel
+   itself losing its place. Only applied at that width — the desktop panel is a
+   dropdown and the page behind it stays live on purpose. */
+body.nav-panel-open {
+  overflow: hidden;
+}

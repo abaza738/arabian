@@ -1,0 +1,15 @@
+# Reverse proxy for the two public services, with automatic HTTPS.
+#
+# Only used when COMPOSE_PROFILES=proxy is set in the root .env. Caddy
+# substitutes these before parsing, so an unset domain leaves an empty site
+# address — which it then reads as a global options block and rejects with
+# "unrecognized global option: reverse_proxy". That means SITE_DOMAIN or
+# CMS_DOMAIN is missing from .env, not that this file is wrong.
+
+{$SITE_DOMAIN} {
+	reverse_proxy ui:{$UI_PORT}
+}
+
+{$CMS_DOMAIN} {
+	reverse_proxy cms:{$STRAPI_PORT}
+}

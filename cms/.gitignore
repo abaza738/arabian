@@ -1,0 +1,146 @@
+############################
+# OS X
+############################
+
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+.Spotlight-V100
+.Trashes
+._*
+
+
+############################
+# Linux
+############################
+
+*~
+
+
+############################
+# Windows
+############################
+
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+
+
+############################
+# Packages
+############################
+
+*.7z
+*.csv
+*.dat
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.seed
+*.so
+*.swo
+*.swp
+*.swn
+*.swm
+*.out
+*.pid
+
+
+############################
+# Logs and databases
+############################
+
+.tmp
+*.log
+*.sql
+*.sqlite
+*.sqlite3
+
+
+############################
+# Misc.
+############################
+
+*#
+ssl
+.idea
+nbproject
+public/uploads/*
+!public/uploads/.gitkeep
+.tsbuildinfo
+.eslintcache
+
+############################
+# Node.js
+############################
+
+lib-cov
+lcov.info
+pids
+logs
+results
+node_modules
+.node_history
+
+############################
+# Package managers
+############################
+
+.yarn/*
+!.yarn/cache
+!.yarn/unplugged
+!.yarn/patches
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+yarn-error.log
+
+############################
+# Tests
+############################
+
+coverage
+
+############################
+# Strapi
+############################
+
+.env
+license.txt
+exports
+.strapi
+# The seed is part of the template — a fork's first `pnpm seed:example` has to
+# have something to import. Un-ignored narrowly rather than by dropping the
+# `data` line: git will not track files under a still-ignored directory, and
+# this is also where Strapi drops its exports.
+data/*
+!data/data.json
+!data/uploads/
+dist
+build
+.strapi-updater.json
+.strapi-cloud.json
+
+# Rewritten from the schemas on every `strapi develop` / `strapi build`, and
+# imported by nothing: the UI hand-writes its own model in
+# `ui/shared/types/content.ts` (these describe Strapi's internal attribute
+# objects, not the JSON the REST API answers with), and `cms/Dockerfile` does
+# not copy them. Tracking them only buys a 2,000-line diff every time a
+# content type changes.
+types/generated/

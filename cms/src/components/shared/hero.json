@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_shared_heroes",
+  "info": {
+    "displayName": "Hero",
+    "icon": "picture",
+    "description": "The landing page's opening statement"
+  },
+  "options": {},
+  "attributes": {
+    "greeting": {
+      "type": "string"
+    },
+    "headline": {
+      "type": "text",
+      "required": true
+    },
+    "body": {
+      "type": "text"
+    },
+    "primaryCta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.link"
+    },
+    "secondaryCta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.link"
+    },
+    "footnote": {
+      "type": "string"
+    }
+  }
+}

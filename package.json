@@ -1,0 +1,20 @@
+{
+  "name": "arabian",
+  "private": true,
+  "packageManager": "pnpm@11.21.0",
+  "scripts": {
+    "prepare": "git config core.hooksPath .githooks || exit 0",
+    "dev:cms": "pnpm --filter cms dev",
+    "dev:ui": "pnpm --filter ui dev",
+    "build:cms": "pnpm --filter cms build",
+    "build:ui": "pnpm --filter ui build",
+    "build": "pnpm --filter cms build && pnpm --filter ui build",
+    "start:cms": "pnpm --filter cms start",
+    "start:ui": "pnpm --filter ui preview",
+    "format": "pnpm --filter cms format && pnpm --filter ui format",
+    "typecheck": "pnpm --filter ui typecheck"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.6"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_shared_cta_cards",
+  "info": {
+    "displayName": "CTA card",
+    "icon": "hand-point-up",
+    "description": "A tinted call-to-action card"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "body": {
+      "type": "text"
+    },
+    "buttonLabel": {
+      "type": "string"
+    },
+    "buttonUrl": {
+      "type": "string"
+    },
+    "variant": {
+      "type": "enumeration",
+      "enum": ["accent", "support"],
+      "default": "accent",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_sections_stat_bands",
+  "info": {
+    "displayName": "Stat band",
+    "icon": "chart-line",
+    "description": "A short pitch beside a row of headline figures"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "text"
+    },
+    "linkLabel": {
+      "type": "string"
+    },
+    "linkUrl": {
+      "type": "string"
+    },
+    "stats": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.stat"
+    }
+  }
+}

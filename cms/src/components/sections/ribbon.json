@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_sections_ribbons",
+  "info": {
+    "displayName": "Ribbon",
+    "icon": "minus",
+    "description": "A full-width band carrying the airline's name and a line of copy"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "tagline": {
+      "type": "string"
+    }
+  }
+}

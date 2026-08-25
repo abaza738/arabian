@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_sections_cta_bands",
+  "info": {
+    "displayName": "CTA band",
+    "icon": "hand-point-up",
+    "description": "A row of tinted call-to-action cards"
+  },
+  "options": {},
+  "attributes": {
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.cta-card"
+    }
+  }
+}

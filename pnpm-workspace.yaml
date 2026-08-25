@@ -1,0 +1,43 @@
+packages:
+  - "cms"
+  - "ui"
+
+# The @nuxtjs/seo modules pull two versions of this, and Nitro's production
+# dependency tracer collapses them into one symlink while tracing each version's
+# subpaths separately — the surviving copy ends up missing `dist/utils.mjs` and
+# `node .output/server/index.mjs` dies on ERR_MODULE_NOT_FOUND. Only the built
+# server hits it; `nuxt dev` resolves from the real node_modules and is fine.
+overrides:
+  nuxtseo-shared: 5.3.11
+
+allowBuilds:
+  "@parcel/watcher": true
+  "@swc/core": true
+  core-js-pure: true
+  esbuild: true
+  sharp: true
+  vue-demi: true
+
+minimumReleaseAgeExclude:
+  - '@nuxtjs/seo@5.3.11'
+  - '@takumi-rs/core-darwin-arm64@2.6.0'
+  - '@takumi-rs/core-darwin-x64@2.6.0'
+  - '@takumi-rs/core-linux-arm64-gnu@2.6.0'
+  - '@takumi-rs/core-linux-arm64-musl@2.6.0'
+  - '@takumi-rs/core-linux-x64-gnu@2.6.0'
+  - '@takumi-rs/core-linux-x64-musl@2.6.0'
+  - '@takumi-rs/core-win32-arm64-msvc@2.6.0'
+  - '@takumi-rs/core-win32-x64-msvc@2.6.0'
+  - '@takumi-rs/core@2.6.0'
+  - '@takumi-rs/helpers@2.6.0'
+  - '@takumi-rs/wasm@2.6.0'
+  - nuxtseo-layer-devtools@5.3.11
+  - nuxtseo-shared@5.3.11
+
+onlyBuiltDependencies:
+  - "@parcel/watcher"
+  - "@swc/core"
+  - core-js-pure
+  - esbuild
+  - sharp
+  - vue-demi

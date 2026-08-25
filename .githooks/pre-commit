@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set -e
+
+staged=$(git diff --cached --name-only --diff-filter=ACMR | grep -E '^ui/.*\.(ts|vue|json)$' || true)
+
+if [ -z "$staged" ]; then
+  exit 0
+fi
+
+echo "pre-commit: pnpm typecheck"
+
+pnpm typecheck
+
+echo "pre-commit: clean"

@@ -1,0 +1,163 @@
+/* ── Layout ── */
+.inner {
+  width: 100%;
+  max-width: var(--layout-max-w);
+  margin: 0 auto;
+  padding: 0 var(--layout-gutter);
+}
+
+/* The chrome runs wider than the reading column. The nav bar, the hub bar
+   and the mega panel all end near the viewport's edges rather than lining up
+   with the article measure — the bar is the frame around the page, not part
+   of it. Capped anyway, so an ultrawide monitor does not fling the logo and
+   the CTA a metre apart. */
+.inner-wide {
+  width: 100%;
+  max-width: var(--layout-max-w-wide);
+  margin: 0 auto;
+  padding: 0 var(--layout-gutter-wide);
+}
+
+/* ── Spacers ── */
+.sep-lg {
+  height: var(--space-10);
+}
+.sep-md {
+  height: var(--space-7);
+}
+.sep-sm {
+  height: var(--space-4);
+}
+
+/* ── Flex ── */
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-1 {
+  flex: 1;
+}
+.items-center {
+  align-items: center;
+}
+.items-start {
+  align-items: flex-start;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-center {
+  justify-content: center;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.gap-sm {
+  gap: var(--space-2);
+}
+.gap-md {
+  gap: var(--space-4);
+}
+.gap-lg {
+  gap: var(--space-6);
+}
+
+/* ── Grid ── */
+.grid {
+  display: grid;
+}
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* The collapse belongs to the utility, not to each page that uses it —
+   `index.vue` and `news.vue` were carrying identical copies of these. */
+@media (max-width: 900px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Text ── */
+.text-serif {
+  font-family: var(--font-serif);
+}
+.text-sm {
+  font-size: var(--text-sm);
+}
+.text-xs {
+  font-size: var(--text-2xs);
+}
+.text-muted {
+  color: var(--color-text-secondary);
+}
+.text-faint {
+  color: var(--color-text-tertiary);
+}
+.text-center {
+  text-align: center;
+}
+.font-light {
+  font-weight: var(--weight-light);
+}
+.font-normal {
+  font-weight: var(--weight-normal);
+}
+.uppercase {
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-md);
+}
+
+/* ── Spacing helpers ── */
+.mt-sm {
+  margin-top: var(--space-2);
+}
+.mt-md {
+  margin-top: var(--space-4);
+}
+.mt-lg {
+  margin-top: var(--space-6);
+}
+.mb-sm {
+  margin-bottom: var(--space-2);
+}
+.mb-md {
+  margin-bottom: var(--space-4);
+}
+.mb-lg {
+  margin-bottom: var(--space-6);
+}
+.p-sm {
+  padding: var(--space-2);
+}
+.p-md {
+  padding: var(--space-4);
+}
+.p-lg {
+  padding: var(--space-6);
+}
+
+/* ── Visibility ── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
