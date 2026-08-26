@@ -33,6 +33,7 @@
     "sections": [
       {
         "__component": "sections.hero",
+        "showScene": true,
         "hero": {
           "greeting": "Welcome aboard",
           "headline": "Fly the network. <em>Keep the logbook.</em>",

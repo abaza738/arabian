@@ -25,9 +25,6 @@
   --color-on-accent-deep-muted: #c9a6a3;
   --color-on-accent-deep-faint: #ab8482;
   --color-on-accent-deep-border: #6b3535;
-  --color-hero-blob-1: #7a2626;
-  --color-hero-blob-2: #4a1414;
-  --color-hero-blob-3: #2b2b2b;
 
   --color-surface: #fafaf8;
   --color-surface-raised: #ffffff;
@@ -131,6 +128,7 @@
   --shadow-overlay: 0 24px 80px rgba(0, 0, 0, 0.25);
 
   --transition: 180ms ease;
+  --duration-float: 9s;
 
   --z-sticky: 1;
   --z-nav: 100;

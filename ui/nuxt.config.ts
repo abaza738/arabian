@@ -34,6 +34,8 @@ export default defineNuxtConfig({
     '@nuxtjs/strapi',
     '@nuxtjs/i18n',
     '@comark/nuxt',
+    '@vueuse/nuxt',
+    'motion-v/nuxt',
   ],
 
   // Here only to feed the OG image renderer. It generates images outside a

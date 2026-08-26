@@ -3,13 +3,12 @@ const { hero } = defineProps<{
   hero: CmsHero
   background?: CmsMedia | null
   decoration?: CmsMedia | null
+  showScene?: boolean
 }>()
 </script>
 
 <template>
   <section class="hero" :class="{ 'hero-scrimmed': background }">
-    <div class="hero-blobs" aria-hidden="true"><span /><span /><span /></div>
-
     <img
       v-if="background"
       class="hero-bg"
@@ -18,6 +17,8 @@ const { hero } = defineProps<{
       aria-hidden="true"
       fetchpriority="high"
     />
+
+    <AppHeroScene v-if="showScene" />
 
     <img
       v-if="decoration"
@@ -84,83 +85,6 @@ const { hero } = defineProps<{
   inset: 0;
   pointer-events: none;
   background: var(--color-overlay);
-}
-
-.hero-blobs {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  filter: blur(6vmax);
-  opacity: 0.5;
-}
-
-.hero-blobs span {
-  position: absolute;
-  border-radius: 50%;
-}
-
-.hero-blobs span:nth-child(1) {
-  width: 36vmax;
-  height: 29vmax;
-  top: -8%;
-  inset-inline-end: 6%;
-  background: var(--color-hero-blob-1);
-  animation: hero-drift-1 34s ease-in-out infinite;
-}
-
-.hero-blobs span:nth-child(2) {
-  width: 29vmax;
-  height: 26vmax;
-  bottom: -14%;
-  inset-inline-start: -6%;
-  background: var(--color-hero-blob-2);
-  animation: hero-drift-2 42s ease-in-out infinite -8s;
-}
-
-.hero-blobs span:nth-child(3) {
-  width: 21vmax;
-  height: 19vmax;
-  top: 34%;
-  inset-inline-start: 44%;
-  background: var(--color-hero-blob-3);
-  opacity: 0.55;
-  animation: hero-drift-3 50s ease-in-out infinite -19s;
-}
-
-@keyframes hero-drift-1 {
-  0%,
-  100% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(-70px, 50px);
-  }
-}
-
-@keyframes hero-drift-2 {
-  0%,
-  100% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(60px, -40px);
-  }
-}
-
-@keyframes hero-drift-3 {
-  0%,
-  100% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(50px, 60px);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero-blobs span {
-    animation: none;
-  }
 }
 
 .hero-bg {

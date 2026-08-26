@@ -8,5 +8,6 @@ const { block } = defineProps<{ block: CmsHeroSection }>()
     :hero="block.hero"
     :background="block.background"
     :decoration="block.decoration"
+    :show-scene="block.showScene ?? false"
   />
 </template>

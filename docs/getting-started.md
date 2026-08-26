@@ -369,6 +369,23 @@ Already seeded? Upload through the admin's Media Library instead and attach
 the images to entries by hand — or `pnpm seed:reset && pnpm seed:example` if
 you have not written anything yet.
 
+The **hero scene** — the layered artwork that floats and drifts with the
+pointer — is the one exception to all of the above: it is not CMS media. Its
+layers are files in `ui/public/hero/`, named back to front by the `LAYERS`
+const in `ui/app/components/App/AppHeroScene.vue`:
+
+| File | Size | Where it shows |
+| --- | --- | --- |
+| `clouds-far.png` | ~1400 wide, transparent | Furthest layer, barely moves |
+| `clouds-near.png` | ~1100 wide, transparent | Middle layer |
+| `aircraft.png` | ~900 wide, transparent | Nearest layer, travels furthest |
+
+Drop in your own three, or edit the const to name a different set. A file that
+is not there hides its own layer rather than breaking the page, and the whole
+scene is hidden below 900px. Switch it on per hero by ticking **Show scene** on
+the hero block in the admin — it is off by default, because that block is
+available on every page.
+
 Replace `cms/data/uploads/logo.svg` and `favicon.svg` with your own mark. The
 ones that ship are deliberately neutral placeholders, not any association's
 crest. The three `document-*.pdf` files are placeholders too — swap in your

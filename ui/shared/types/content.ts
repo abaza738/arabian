@@ -175,6 +175,7 @@ export interface CmsHeroSection extends CmsComponent {
   hero?: CmsHero | null
   background?: CmsMedia | null
   decoration?: CmsMedia | null
+  showScene?: boolean | null
 }
 
 export interface CmsRibbonSection extends CmsComponent {

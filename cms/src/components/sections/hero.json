@@ -24,6 +24,10 @@
       "multiple": false,
       "required": false,
       "allowedTypes": ["images"]
+    },
+    "showScene": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
