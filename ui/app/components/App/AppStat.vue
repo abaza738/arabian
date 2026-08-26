@@ -14,6 +14,7 @@ defineProps<{ value: string; label: string }>()
   font-family: var(--font-serif);
   font-size: var(--text-2xl);
   color: var(--color-text);
+  font-variant-numeric: tabular-nums;
 }
 .stat-label {
   font-size: var(--text-xs);

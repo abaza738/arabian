@@ -102,7 +102,7 @@ const { hero } = defineProps<{
   top: var(--space-10);
   inset-inline-end: var(--layout-gutter);
   max-width: 150px;
-  border-radius: var(--space-1);
+  border-radius: var(--radius-sm);
   height: auto;
   z-index: var(--z-sticky);
 }
@@ -120,7 +120,7 @@ const { hero } = defineProps<{
 .hero-greeting {
   display: flex;
   align-items: center;
-  gap: var(--space-3-5);
+  gap: var(--space-4);
   font-size: var(--text-sm);
   font-weight: var(--weight-normal);
   font-family: var(--font-serif);
@@ -154,7 +154,7 @@ const { hero } = defineProps<{
 
 .hero-footnote {
   position: absolute;
-  bottom: var(--space-9);
+  bottom: var(--space-10);
   inset-inline-end: var(--layout-gutter);
   z-index: var(--z-sticky);
   font-family: var(--font-serif);

@@ -128,7 +128,7 @@ const hubContact = computed(() =>
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   gap: var(--space-8);
-  padding: var(--space-9) var(--layout-gutter) var(--space-7);
+  padding: var(--space-10) var(--layout-gutter) var(--space-7);
 }
 .footer-brand {
   font-family: var(--font-serif);
@@ -140,7 +140,7 @@ const hubContact = computed(() =>
   font-size: var(--text-sm);
   color: var(--color-ink-text-secondary);
   line-height: var(--leading-loose);
-  font-weight: var(--weight-light);
+  font-weight: var(--weight-normal);
   max-width: 240px;
 }
 .footer-col-title {
@@ -155,7 +155,7 @@ const hubContact = computed(() =>
   display: block;
   font-size: var(--text-sm);
   color: var(--color-ink-text-secondary);
-  font-weight: var(--weight-light);
+  font-weight: var(--weight-normal);
   margin-bottom: var(--space-2);
   cursor: pointer;
   text-decoration: none;
@@ -170,13 +170,13 @@ const hubContact = computed(() =>
   align-items: center;
   flex-wrap: wrap;
   gap: var(--space-1) var(--space-4);
-  padding: var(--space-3-5) var(--layout-gutter);
+  padding: var(--space-4) var(--layout-gutter);
   border-top: 1px solid var(--color-ink-border);
 }
 .footer-copy {
   font-size: var(--text-xs);
   color: var(--color-ink-text-muted);
-  font-weight: var(--weight-light);
+  font-weight: var(--weight-normal);
 }
 .footer-wordmark-sub {
   margin-top: var(--space-3);

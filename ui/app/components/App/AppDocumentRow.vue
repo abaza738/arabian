@@ -66,8 +66,8 @@ const published = computed(() =>
   display: flex;
   align-items: center;
   gap: var(--space-4);
-  padding: var(--space-3-5) var(--space-4);
-  border-radius: 10px;
+  padding: var(--space-4) var(--space-4);
+  border-radius: var(--radius-md);
   text-decoration: none;
   color: inherit;
   transition: background var(--transition);
@@ -97,7 +97,7 @@ const published = computed(() =>
 
 .doc-date {
   font-size: var(--text-2xs);
-  font-weight: var(--weight-light);
+  font-weight: var(--weight-normal);
   color: var(--color-text-tertiary);
 }
 
@@ -113,7 +113,7 @@ const published = computed(() =>
 .doc-description {
   margin-top: var(--space-1);
   font-size: var(--text-sm);
-  font-weight: var(--weight-light);
+  font-weight: var(--weight-normal);
   line-height: var(--leading-normal);
   color: var(--color-text-secondary);
 }
@@ -135,7 +135,7 @@ const published = computed(() =>
 }
 .doc-size {
   font-size: var(--text-3xs);
-  font-weight: var(--weight-light);
+  font-weight: var(--weight-normal);
   color: var(--color-text-tertiary);
 }
 </style>

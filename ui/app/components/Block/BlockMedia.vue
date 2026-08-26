@@ -18,7 +18,7 @@
 .block-media-file {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-1-5);
+  gap: var(--space-2);
   font-size: var(--text-md);
   color: var(--color-accent);
   text-decoration: underline;

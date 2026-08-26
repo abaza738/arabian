@@ -52,6 +52,6 @@ const to = (value: string | null) => ({
 .filter-bar > * {
   display: inline-flex;
   align-items: center;
-  min-height: var(--space-11);
+  min-height: var(--space-12);
 }
 </style>

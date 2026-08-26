@@ -286,7 +286,7 @@ usePageSeo(() => hub.value?.name ?? '', {
   font-size: var(--text-base);
   color: var(--color-text-secondary);
   line-height: var(--leading-loose);
-  font-weight: var(--weight-light);
+  font-weight: var(--weight-normal);
   max-width: 60ch;
 }
 
@@ -300,8 +300,8 @@ usePageSeo(() => hub.value?.name ?? '', {
 .hub-facts {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: var(--space-1-5) var(--space-5);
-  padding-block: var(--space-3-5);
+  gap: var(--space-2) var(--space-5);
+  padding-block: var(--space-4);
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
   font-family: var(--font-sans);
@@ -312,10 +312,11 @@ usePageSeo(() => hub.value?.name ?? '', {
   letter-spacing: var(--tracking-lg);
   text-transform: uppercase;
   color: var(--color-text-tertiary);
-  padding-top: var(--space-0-5);
+  padding-top: var(--space-1);
 }
 .hub-facts dd {
   overflow-wrap: anywhere;
+  font-variant-numeric: tabular-nums;
 }
 .hub-facts a {
   color: var(--color-accent);

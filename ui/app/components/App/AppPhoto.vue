@@ -81,7 +81,7 @@ const style = computed(() => ({
 }
 .photo-label {
   font-size: var(--text-3xs);
-  font-weight: var(--weight-light);
+  font-weight: var(--weight-normal);
   letter-spacing: var(--tracking-xs);
 }
 .photo-img {

@@ -59,9 +59,9 @@ const time = computed(() =>
 <style scoped>
 .event-row {
   display: flex;
-  gap: var(--space-3-5);
+  gap: var(--space-4);
   padding: var(--space-3) var(--space-4);
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   transition: background var(--transition);
   cursor: pointer;
   text-decoration: none;
@@ -84,6 +84,7 @@ const time = computed(() =>
 .event-day {
   font-family: var(--font-serif);
   font-size: var(--text-xl);
+  font-variant-numeric: tabular-nums;
   line-height: var(--leading-none);
   color: var(--color-text);
 }
@@ -105,9 +106,10 @@ const time = computed(() =>
 }
 .event-meta {
   font-size: var(--text-xs);
+  font-variant-numeric: tabular-nums;
   color: var(--color-text-tertiary);
-  font-weight: var(--weight-light);
-  margin-top: var(--space-0-5);
+  font-weight: var(--weight-normal);
+  margin-top: var(--space-1);
 }
 .event-flag {
   display: inline-block;

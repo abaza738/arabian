@@ -40,7 +40,7 @@ const { locale } = useI18n()
   flex-direction: column;
   align-items: flex-start;
   gap: var(--space-2);
-  padding: var(--space-3-5) var(--space-4) var(--space-5);
+  padding: var(--space-4) var(--space-4) var(--space-5);
 }
 .news-card-title {
   font-family: var(--font-serif);
@@ -51,6 +51,7 @@ const { locale } = useI18n()
 }
 .news-card-meta {
   font-size: var(--text-xs);
+  font-variant-numeric: tabular-nums;
   color: var(--color-text-tertiary);
 }
 </style>

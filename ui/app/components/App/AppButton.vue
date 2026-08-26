@@ -40,7 +40,7 @@ const tag = computed(() => {
 <style scoped>
 .btn {
   display: inline-block;
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-sm);
   font-family: var(--font-sans);
   font-size: var(--text-sm);
   border: none;
@@ -96,7 +96,7 @@ const tag = computed(() => {
   }
 
   /* The filled pair for a dark surface — the hero is the only one so far.
-     Cream on the deep green, the same two colours the surface already uses,
+     Cream on the deep maroon, the same two colours the surface already uses,
      so the CTA reads as part of it. Gold stays a hairline accent elsewhere
      and never becomes a slab. */
   &[data-variant='light'] {

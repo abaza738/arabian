@@ -40,9 +40,13 @@ const to = computed(() =>
             {{ t('actions.readMore') }} <span class="arrow">→</span>
           </AppButton>
 
-          <span v-if="article.publishedAt" class="text-faint text-sm">
+          <time
+            v-if="article.publishedAt"
+            :datetime="article.publishedAt"
+            class="text-faint text-sm"
+          >
             {{ formatDate(article.publishedAt, locale) }}
-          </span>
+          </time>
         </div>
       </div>
     </div>
@@ -71,7 +75,7 @@ const to = computed(() =>
   min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: var(--space-3-5);
+  gap: var(--space-4);
 }
 .featured-excerpt {
   font-size: var(--text-base);

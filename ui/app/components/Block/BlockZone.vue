@@ -72,9 +72,9 @@ const { blocks } = defineProps<{ blocks?: CmsBlock[] }>()
 .block-zone {
   display: flex;
   flex-direction: column;
-  gap: var(--space-8);
+  gap: var(--space-section);
 }
 .block-zone > :deep(.ribbon) {
-  margin-block: calc(var(--space-8) * -1);
+  margin-block: calc(var(--space-section) * -1);
 }
 </style>

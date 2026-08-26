@@ -129,7 +129,7 @@ useSchemaOrg([defineArticle(newsArticle)])
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: var(--space-3-5);
+  gap: var(--space-4);
 }
 
 .article-title {
@@ -148,6 +148,7 @@ useSchemaOrg([defineArticle(newsArticle)])
   align-items: center;
   gap: var(--space-2);
   font-size: var(--text-sm);
+  font-variant-numeric: tabular-nums;
   color: var(--color-text-tertiary);
 }
 

@@ -74,7 +74,7 @@ const place = computed(() =>
 
 .destination-summary {
   font-size: var(--text-sm);
-  font-weight: var(--weight-light);
+  font-weight: var(--weight-normal);
   line-height: var(--leading-normal);
   color: var(--color-text-secondary);
 }

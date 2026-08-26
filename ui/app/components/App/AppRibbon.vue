@@ -40,7 +40,7 @@ defineProps<{ name?: string | null; tagline?: string | null }>()
 .ribbon-tag {
   font-size: var(--text-2xs);
   color: var(--color-ink-text-muted);
-  font-weight: var(--weight-light);
+  font-weight: var(--weight-normal);
 }
 
 @media (max-width: 560px) {

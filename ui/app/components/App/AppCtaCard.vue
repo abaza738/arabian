@@ -16,12 +16,12 @@ const { card } = defineProps<{ card: CmsCtaCard }>()
 <style scoped>
 .join-card {
   background: var(--color-accent-muted);
-  border-radius: 14px;
+  border-radius: var(--radius-md);
   padding: var(--space-6);
 }
 .donate-card {
   background: var(--color-support-muted);
-  border-radius: 14px;
+  border-radius: var(--radius-md);
   padding: var(--space-6);
 }
 .join-title {
@@ -34,7 +34,7 @@ const { card } = defineProps<{ card: CmsCtaCard }>()
   font-size: var(--text-md);
   color: var(--color-text-secondary);
   line-height: var(--leading-relaxed);
-  font-weight: var(--weight-light);
+  font-weight: var(--weight-normal);
   margin-bottom: var(--space-4);
 }
 </style>

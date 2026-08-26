@@ -168,7 +168,7 @@ useEntrySeo(() => aircraft.value, {
 
   dt {
     color: var(--color-text-tertiary);
-    font-weight: var(--weight-light);
+    font-weight: var(--weight-normal);
   }
   dd {
     color: var(--color-text-secondary);

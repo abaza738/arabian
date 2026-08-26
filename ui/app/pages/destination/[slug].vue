@@ -42,7 +42,9 @@ if (error.value || !loaded) {
 const destination = computed(() => data.value?.data?.[0] ?? loaded)
 
 const place = computed(() =>
-  [destination.value.city, destination.value.country].filter(Boolean).join(', '),
+  [destination.value.city, destination.value.country]
+    .filter(Boolean)
+    .join(', '),
 )
 
 useEntrySeo(() => destination.value, {
@@ -133,7 +135,7 @@ useEntrySeo(() => destination.value, {
 
   dt {
     color: var(--color-text-tertiary);
-    font-weight: var(--weight-light);
+    font-weight: var(--weight-normal);
   }
   dd {
     color: var(--color-text-secondary);

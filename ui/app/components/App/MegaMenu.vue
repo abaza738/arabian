@@ -149,11 +149,7 @@ onUnmounted(() => {
         </NuxtLink>
       </nav>
 
-      <nav
-        v-if="hubs.length"
-        class="mega-col"
-        aria-labelledby="mega-hubs"
-      >
+      <nav v-if="hubs.length" class="mega-col" aria-labelledby="mega-hubs">
         <h2 id="mega-hubs" class="mega-heading">
           {{ t('menu.hubs') }}
         </h2>

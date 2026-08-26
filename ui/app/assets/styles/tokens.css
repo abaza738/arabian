@@ -26,16 +26,16 @@
   --color-on-accent-deep-faint: #ab8482;
   --color-on-accent-deep-border: #6b3535;
 
-  --color-surface: #fafaf8;
+  --color-surface: #fafafa;
   --color-surface-raised: #ffffff;
-  --color-surface-subtle: #f2f0eb;
-  --color-surface-muted: #eae7e1;
+  --color-surface-subtle: #f1f2f3;
+  --color-surface-muted: #e7e8ea;
 
-  --color-text: #1a1a18;
-  --color-text-secondary: #4d4d49;
-  --color-text-tertiary: #63625b;
+  --color-text: #191a1b;
+  --color-text-secondary: #4c4e51;
+  --color-text-tertiary: #6b6d72;
 
-  --color-border: #e4e1da;
+  --color-border: #e2e3e6;
 
   --color-ink: #2b2b2b; /* Arabian Black */
   --color-ink-subtle: #363636;
@@ -49,8 +49,8 @@
 
   --color-overlay: #0a0a088c; /* @ 55% */
 
-  --color-photo-bg-from: #e4e1d9;
-  --color-photo-bg-to: #d6d2c8;
+  --color-photo-bg-from: #e4e5e7;
+  --color-photo-bg-to: #d6d7da;
 
   /* NOT BRAND
   Leave these alone in a rebrand. They are carrying meaning, not identity.
@@ -117,39 +117,36 @@
   --tracking-xl: 0.25em;
   --tracking-brand: -0.07em; /* Marcellus, per branding guide (-70) */
 
-  --radius-sm: 6px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
   --radius-full: 99px;
 
-  --shadow-sm: 0 2px 14px rgba(0, 0, 0, 0.07);
-  --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.12);
   --shadow-nav: 0 1px 20px rgba(0, 0, 0, 0.08);
   --shadow-overlay: 0 24px 80px rgba(0, 0, 0, 0.25);
 
-  --transition: 180ms ease;
+  --transition: 220ms cubic-bezier(0.2, 0, 0, 1);
   --duration-float: 9s;
 
   --z-sticky: 1;
   --z-nav: 100;
 
   --space-px: 1px;
-  --space-0-5: 2px;
   --space-1: 4px;
-  --space-1-5: 6px;
   --space-2: 8px;
-  --space-2-5: 10px;
   --space-3: 12px;
-  --space-3-5: 14px;
   --space-4: 16px;
   --space-5: 20px;
   --space-6: 24px;
   --space-7: 28px;
   --space-8: 32px;
-  --space-9: 36px;
   --space-10: 40px;
-  --space-11: 44px;
   --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  --space-section: clamp(var(--space-10), 8vw, var(--space-20));
 
   --layout-max-w: 880px;
   --layout-gutter: clamp(var(--space-4), 4vw, var(--space-7));

@@ -42,7 +42,7 @@ useSeoMeta({
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  gap: var(--space-3-5);
+  gap: var(--space-4);
   padding-block: var(--space-12);
   min-height: 70vh;
 }

@@ -30,7 +30,10 @@ const localePath = useLocalePath()
         </div>
       </div>
 
-      <div v-if="block.stats?.length" class="grid grid-2 gap-md stat-band-stats">
+      <div
+        v-if="block.stats?.length"
+        class="grid grid-2 gap-md stat-band-stats"
+      >
         <AppStat
           v-for="stat in block.stats"
           :key="stat.id"
@@ -57,7 +60,7 @@ const localePath = useLocalePath()
 .stat-band-title {
   font-size: var(--text-lg);
   font-weight: var(--weight-medium);
-  margin-bottom: var(--space-3-5);
+  margin-bottom: var(--space-4);
   line-height: var(--leading-snug);
 }
 
@@ -65,7 +68,7 @@ const localePath = useLocalePath()
   font-size: var(--text-base);
   color: var(--color-text-secondary);
   line-height: var(--leading-loose);
-  font-weight: var(--weight-light);
+  font-weight: var(--weight-normal);
 }
 
 @media (max-width: 900px) {

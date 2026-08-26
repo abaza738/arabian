@@ -26,9 +26,7 @@ const { data: hubs } = await useHubs()
 const hub = useActiveHub(hubs)
 
 usePageSeo(() =>
-  hub.value?.name
-    ? `${hub.value.name} · ${t('nav.news')}`
-    : t('nav.news'),
+  hub.value?.name ? `${hub.value.name} · ${t('nav.news')}` : t('nav.news'),
 )
 </script>
 

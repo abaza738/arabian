@@ -80,7 +80,7 @@ const date = computed(() =>
 .ann-date {
   margin-inline-start: auto;
   font-size: var(--text-2xs);
-  font-weight: var(--weight-light);
+  font-weight: var(--weight-normal);
   color: var(--color-text-tertiary);
 }
 

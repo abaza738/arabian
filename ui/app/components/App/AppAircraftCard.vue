@@ -5,7 +5,9 @@ const { t, locale } = useI18n()
 const localePath = useLocalePath()
 
 const number = (value?: number | null) =>
-  typeof value === 'number' ? new Intl.NumberFormat(locale.value).format(value) : ''
+  typeof value === 'number'
+    ? new Intl.NumberFormat(locale.value).format(value)
+    : ''
 </script>
 
 <template>
@@ -85,7 +87,7 @@ const number = (value?: number | null) =>
 
 .aircraft-summary {
   font-size: var(--text-sm);
-  font-weight: var(--weight-light);
+  font-weight: var(--weight-normal);
   line-height: var(--leading-normal);
   color: var(--color-text-secondary);
 }
@@ -99,7 +101,7 @@ const number = (value?: number | null) =>
 
   dt {
     color: var(--color-text-tertiary);
-    font-weight: var(--weight-light);
+    font-weight: var(--weight-normal);
   }
   dd {
     color: var(--color-text-secondary);

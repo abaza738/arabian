@@ -78,7 +78,7 @@ const since = computed(() =>
   font-size: var(--text-2xs);
   letter-spacing: var(--tracking-md);
   color: var(--color-text-tertiary);
-  margin-top: var(--space-0-5);
+  margin-top: var(--space-1);
   font-variant-numeric: tabular-nums;
 }
 .pilot-role {
@@ -86,21 +86,21 @@ const since = computed(() =>
   letter-spacing: var(--tracking-md);
   text-transform: uppercase;
   color: var(--color-accent);
-  margin-top: var(--space-0-5);
+  margin-top: var(--space-1);
 }
 .pilot-meta {
   display: flex;
-  gap: var(--space-1-5);
+  gap: var(--space-2);
   font-size: var(--text-2xs);
-  font-weight: var(--weight-light);
+  font-weight: var(--weight-normal);
   color: var(--color-text-tertiary);
-  margin-top: var(--space-0-5);
+  margin-top: var(--space-1);
   font-variant-numeric: tabular-nums;
 }
 .pilot-bio {
   font-size: var(--text-sm);
   line-height: var(--leading-relaxed);
-  font-weight: var(--weight-light);
+  font-weight: var(--weight-normal);
   color: var(--color-text-secondary);
   margin-top: var(--space-2);
   overflow-wrap: break-word;

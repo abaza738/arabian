@@ -299,7 +299,7 @@ onUnmounted(() => {
      first link. */
   gap: var(--space-6);
   min-height: var(--nav-height);
-  padding-block: var(--space-2-5);
+  padding-block: var(--space-3);
   /* The rule under the first row, drawn here rather than on `.site-nav` so it
      stays put when the panel opens between the two rows. An inset shadow, not
      a border: a real one would add a pixel `--nav-stack-height` does not know
@@ -311,7 +311,7 @@ onUnmounted(() => {
    shrink a row its padding already fills — the block padding has to come down
    with it or the two rows stack taller than the pair is meant to be. */
 .site-nav:has(.hub-bar) .nav-inner {
-  padding-block: var(--space-1-5);
+  padding-block: var(--space-2);
 }
 
 .nav-logo {
@@ -367,7 +367,7 @@ onUnmounted(() => {
 }
 .nav-wordmark-sub {
   font-size: var(--text-2xs);
-  font-weight: var(--weight-light);
+  font-weight: var(--weight-normal);
   color: var(--color-text-tertiary);
   letter-spacing: var(--tracking-xs);
   line-height: var(--leading-snug);
@@ -423,7 +423,7 @@ onUnmounted(() => {
 .nav-more {
   display: flex;
   align-items: center;
-  gap: var(--space-1-5);
+  gap: var(--space-2);
   /* A button, so the UA's own padding has to be cleared before `.nav-link`'s
      single padding-bottom puts the underline where the links have it. */
   padding: 0 0 var(--space-1);
@@ -481,10 +481,10 @@ onUnmounted(() => {
 .hub-bar-label {
   display: flex;
   align-items: center;
-  gap: var(--space-1-5);
+  gap: var(--space-2);
   flex-shrink: 0;
   font-size: var(--text-xs);
-  font-weight: var(--weight-light);
+  font-weight: var(--weight-normal);
   color: var(--color-text-tertiary);
   white-space: nowrap;
 }
@@ -544,7 +544,7 @@ onUnmounted(() => {
     gap: var(--space-4);
   }
   .nav-end {
-    gap: var(--space-2-5);
+    gap: var(--space-3);
   }
 }
 

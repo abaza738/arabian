@@ -109,7 +109,7 @@ useEntrySeo(() => announcement.value)
   flex-wrap: wrap;
   gap: var(--space-2);
   font-size: var(--text-xs);
-  font-weight: var(--weight-light);
+  font-weight: var(--weight-normal);
   color: var(--color-text-tertiary);
 }
 
@@ -138,7 +138,7 @@ useEntrySeo(() => announcement.value)
 }
 
 .ann-expired {
-  padding: var(--space-2-5) var(--space-3-5);
+  padding: var(--space-3) var(--space-4);
   border-radius: var(--radius-sm);
   background: var(--color-notice-warn-bg);
   color: var(--color-notice-warn-text);
@@ -147,7 +147,7 @@ useEntrySeo(() => announcement.value)
 
 .ann-body {
   font-size: var(--text-base);
-  font-weight: var(--weight-light);
+  font-weight: var(--weight-normal);
   line-height: var(--leading-loose);
   color: var(--color-text-secondary);
 

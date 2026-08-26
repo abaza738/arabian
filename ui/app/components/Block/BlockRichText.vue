@@ -33,7 +33,7 @@ const { block } = defineProps<{ block: CmsRichTextBlock }>()
   font-weight: var(--weight-semibold);
   color: var(--color-text);
   margin-top: var(--space-8);
-  margin-bottom: var(--space-2-5);
+  margin-bottom: var(--space-3);
 }
 
 /* Editor-supplied media and wide blocks: the image scales, the things that
@@ -62,7 +62,7 @@ const { block } = defineProps<{ block: CmsRichTextBlock }>()
 }
 
 .rich-text li {
-  margin-bottom: var(--space-1-5);
+  margin-bottom: var(--space-2);
 }
 
 /* The block zone already puts --space-8 between blocks; edge margins would

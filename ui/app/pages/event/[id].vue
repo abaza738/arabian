@@ -287,11 +287,10 @@ useSchemaOrg([defineEvent(eventSchema)])
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: var(--space-5) var(--space-3-5) var(--space-3-5);
+  padding: var(--space-5) var(--space-4) var(--space-4);
   border-radius: var(--radius-md);
   background: var(--color-ink);
   color: var(--color-ink-on);
-  box-shadow: var(--shadow-sm);
 }
 
 .plate-weekday {
@@ -325,7 +324,7 @@ useSchemaOrg([defineEvent(eventSchema)])
   align-items: center;
   gap: var(--space-1);
   width: 100%;
-  margin-top: var(--space-3-5);
+  margin-top: var(--space-4);
   padding-top: var(--space-3);
   border-top: 1px solid var(--color-ink-border);
 }
@@ -350,7 +349,7 @@ useSchemaOrg([defineEvent(eventSchema)])
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: var(--space-3-5);
+  gap: var(--space-4);
 }
 
 .event-topline {
@@ -381,7 +380,7 @@ useSchemaOrg([defineEvent(eventSchema)])
 
 .event-disruption {
   width: 100%;
-  padding: var(--space-2-5) var(--space-4);
+  padding: var(--space-3) var(--space-4);
   border-radius: var(--radius-sm);
   font-family: var(--font-sans);
   font-size: var(--text-sm);
@@ -424,9 +423,9 @@ useSchemaOrg([defineEvent(eventSchema)])
 .event-facts {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: var(--space-1-5) var(--space-5);
+  gap: var(--space-2) var(--space-5);
   width: 100%;
-  padding-block: var(--space-3-5);
+  padding-block: var(--space-4);
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
   font-family: var(--font-sans);
@@ -438,7 +437,7 @@ useSchemaOrg([defineEvent(eventSchema)])
   letter-spacing: var(--tracking-lg);
   text-transform: uppercase;
   color: var(--color-text-tertiary);
-  padding-top: var(--space-0-5);
+  padding-top: var(--space-1);
 }
 
 .event-facts dd {
@@ -455,7 +454,7 @@ useSchemaOrg([defineEvent(eventSchema)])
     position: static;
     flex-direction: row;
     align-items: baseline;
-    gap: var(--space-2-5);
+    gap: var(--space-3);
     padding: var(--space-3) var(--space-4);
   }
 
@@ -471,7 +470,7 @@ useSchemaOrg([defineEvent(eventSchema)])
     width: auto;
     margin-inline-start: auto;
     padding: 0;
-    padding-inline-start: var(--space-3-5);
+    padding-inline-start: var(--space-4);
     border-top: none;
     border-inline-start: 1px solid var(--color-ink-border);
   }

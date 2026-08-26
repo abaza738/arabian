@@ -233,7 +233,7 @@ useEntrySeo(() => ({
 .milestone-text {
   font-size: var(--text-md);
   line-height: var(--leading-relaxed);
-  font-weight: var(--weight-light);
+  font-weight: var(--weight-normal);
   color: var(--color-text-secondary);
   margin-top: var(--space-1);
   overflow-wrap: break-word;
@@ -274,10 +274,11 @@ useEntrySeo(() => ({
   letter-spacing: var(--tracking-lg);
   text-transform: uppercase;
   color: var(--color-text-tertiary);
-  padding-top: var(--space-0-5);
+  padding-top: var(--space-1);
 }
 .contact-facts dd {
   overflow-wrap: anywhere;
+  font-variant-numeric: tabular-nums;
 }
 .contact-facts a {
   color: var(--color-accent);

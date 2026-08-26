@@ -40,7 +40,7 @@ const { t } = useI18n()
   flex-direction: column;
   align-items: flex-start;
   gap: var(--space-2);
-  padding: var(--space-3) var(--space-3-5) var(--space-4);
+  padding: var(--space-3) var(--space-4) var(--space-4);
 }
 .spotlight-title {
   font-family: var(--font-serif);

@@ -55,7 +55,7 @@
 .block-slider-dots {
   display: flex;
   justify-content: center;
-  gap: var(--space-1-5);
+  gap: var(--space-2);
 }
 
 .block-slider-dot {

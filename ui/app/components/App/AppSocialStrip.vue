@@ -31,7 +31,7 @@ const { t } = useI18n()
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: var(--space-2-5);
+  gap: var(--space-3);
 }
 .social-label {
   font-size: var(--text-2xs);

@@ -32,7 +32,7 @@ const localePath = useLocalePath()
   align-items: baseline;
   justify-content: space-between;
   gap: var(--space-3);
-  padding: var(--space-2-5) var(--space-3);
+  padding: var(--space-3) var(--space-3);
   border-radius: var(--radius-sm);
   transition: background var(--transition);
 }
@@ -45,7 +45,7 @@ const localePath = useLocalePath()
 }
 .hub-code {
   font-size: var(--text-xs);
-  font-weight: var(--weight-light);
+  font-weight: var(--weight-normal);
   letter-spacing: var(--tracking-md);
   color: var(--color-text-tertiary);
   white-space: nowrap;
