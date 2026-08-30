@@ -16,6 +16,7 @@ RUN pnpm install --frozen-lockfile --filter cms
 
 FROM deps AS builder
 COPY cms/ cms/
+ENV DATABASE_CLIENT=postgres
 RUN pnpm --filter cms build
 
 FROM base AS runner
