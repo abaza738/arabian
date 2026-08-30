@@ -750,6 +750,8 @@ async function importSeedData() {
     announcement: ['find', 'findOne'],
     aircraft: ['find', 'findOne'],
     destination: ['find', 'findOne'],
+    airport: ['find', 'findOne'],
+    flight: ['find', 'findOne'],
     // ponytail: `api::document.document` reads awkwardly next to Strapi's own
     // Document Service. Taken deliberately — editors call these documents.
     document: ['find', 'findOne'],

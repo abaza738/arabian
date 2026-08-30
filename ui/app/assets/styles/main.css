@@ -83,6 +83,24 @@ a {
   color: inherit;
 }
 
+/* The one focus ring, for every focusable thing on the site. `:focus-visible`
+   rather than `:focus` so a mouse click on a button does not leave a ring
+   behind, while tabbing to it does. The outline is drawn outside the border
+   box, so it stays legible on a filled control as well as a bare link. */
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+/* Form controls do not inherit the body typeface on their own. */
+input,
+select,
+textarea,
+button {
+  font: inherit;
+  color: inherit;
+}
+
 time {
   font-variant-numeric: tabular-nums;
 }

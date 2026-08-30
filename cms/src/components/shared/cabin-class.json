@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_cabin_classes",
+  "info": {
+    "displayName": "Cabin class",
+    "icon": "seat",
+    "description": "One bookable cabin offered in the flight search form"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -49,6 +49,7 @@
         "sections.feed",
         "sections.stat-band",
         "sections.cta-band",
+        "sections.flight-search",
         "shared.media",
         "shared.quote",
         "shared.rich-text",

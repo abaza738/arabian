@@ -131,6 +131,7 @@ exports
 # this is also where Strapi drops its exports.
 data/*
 !data/data.json
+!data/flights.example.csv
 !data/uploads/
 dist
 build

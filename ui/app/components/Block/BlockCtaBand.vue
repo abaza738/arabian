@@ -13,5 +13,6 @@ const { block } = defineProps<{ block: CmsCtaBandSection }>()
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: var(--space-6);
+  padding-block: var(--space-10);
 }
 </style>

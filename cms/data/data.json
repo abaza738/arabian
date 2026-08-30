@@ -26,7 +26,13 @@
     "defaultSeo": {
       "metaTitle": "Arabian — Virtual Airline",
       "metaDescription": "A regional virtual airline. Published schedule, shared fleet, crew in every timezone."
-    }
+    },
+    "cabinClasses": [
+      { "label": "Economy" },
+      { "label": "Premium economy" },
+      { "label": "Business" },
+      { "label": "First" }
+    ]
   },
 
   "home": {

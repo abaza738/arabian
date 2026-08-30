@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "flights",
+  "info": {
+    "singularName": "flight",
+    "pluralName": "flights",
+    "displayName": "Flight",
+    "description": "One scheduled leg: a flight number, a pair of airports, Zulu times and the weekdays it runs"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": false
+    }
+  },
+  "attributes": {
+    "flightNumber": {
+      "type": "string",
+      "required": true
+    },
+    "callsign": {
+      "type": "string",
+      "required": true
+    },
+    "departureAirport": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::airport.airport",
+      "inversedBy": "flightsOut"
+    },
+    "arrivalAirport": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::airport.airport",
+      "inversedBy": "flightsIn"
+    },
+    "departUtc": {
+      "type": "time",
+      "required": true
+    },
+    "arriveUtc": {
+      "type": "time",
+      "required": true
+    },
+    "days": {
+      "type": "string",
+      "required": true,
+      "maxLength": 7
+    },
+    "tags": {
+      "type": "string"
+    }
+  }
+}

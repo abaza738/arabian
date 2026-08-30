@@ -116,6 +116,16 @@
         }
       }
     },
+    "cabinClasses": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.cabin-class",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
     "socialLinks": {
       "type": "component",
       "repeatable": true,

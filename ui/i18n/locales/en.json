@@ -10,7 +10,8 @@
     "fleet": "Fleet",
     "network": "Network",
     "roster": "Roster",
-    "documents": "Documents"
+    "documents": "Documents",
+    "flights": "Flights"
   },
   "sections": {
     "featured": "Featured",
@@ -27,7 +28,8 @@
     "whereWeFly": "Where we fly",
     "whoFlies": "Who flies with us",
     "papers": "Papers",
-    "archive": "Archive"
+    "archive": "Archive",
+    "theTimetable": "Where we fly, and when"
   },
   "filters": {
     "allCategories": "All",
@@ -120,7 +122,11 @@
     "fleetFailed": "The fleet list did not load. Refresh the page to try again.",
     "networkFailed": "The network list did not load. Refresh the page to try again.",
     "rosterFailed": "The roster did not load. Refresh the page to try again.",
-    "documentsFailed": "The document list did not load. Refresh the page to try again."
+    "documentsFailed": "The document list did not load. Refresh the page to try again.",
+    "loading": "Loading the timetable…",
+    "noFlights": "No flights have been published yet.",
+    "noItineraries": "No service from {from} to {to} on that day. Try another date, or clear the date to see every operating day.",
+    "flightsFailed": "The timetable did not load. Refresh the page to try again."
   },
   "menu": {
     "read": "Read",
@@ -173,5 +179,48 @@
       "other": "Other"
     },
     "newTab": "opens in a new tab"
+  },
+  "flight": {
+    "from": "From",
+    "to": "To",
+    "date": "Date",
+    "anyAirport": "Any airport",
+    "tripType": "Trip type",
+    "oneWay": "One way",
+    "roundTrip": "Round trip",
+    "departure": "Departure",
+    "return": "Return",
+    "returnFlights": "Return",
+    "passengers": "Passengers",
+    "pax": {
+      "adults": "Adults",
+      "adultsAge": "12 years and over",
+      "children": "Children",
+      "childrenAge": "2–11 years",
+      "infants": "Infants",
+      "infantsAge": "Under 2 years",
+      "adultsCount": "{count} adult | {count} adults",
+      "childrenCount": "{count} child | {count} children",
+      "infantsCount": "{count} infant | {count} infants",
+      "less": "One fewer {kind}",
+      "more": "One more {kind}"
+    },
+    "cabin": "Cabin",
+    "search": "Search",
+    "outbound": "Outbound",
+    "changeAt": "Change at {airport} · {duration}",
+    "totalTime": "Total {duration}",
+    "plusOneDay": "+1",
+    "pickDateForConnections": "Pick a date to see connecting itineraries. Without one, only non-stop services can be listed.",
+    "wholeTimetable": "{count} scheduled flights",
+    "days": {
+      "1": "Mon",
+      "2": "Tue",
+      "3": "Wed",
+      "4": "Thu",
+      "5": "Fri",
+      "6": "Sat",
+      "7": "Sun"
+    }
   }
 }

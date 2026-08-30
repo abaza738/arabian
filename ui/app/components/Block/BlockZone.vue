@@ -64,6 +64,11 @@ const { blocks } = defineProps<{ blocks?: CmsBlock[] }>()
         v-else-if="block.__component === 'sections.cta-band'"
         :block="block"
       />
+
+      <BlockFlightSearch
+        v-else-if="block.__component === 'sections.flight-search'"
+        :block="block"
+      />
     </template>
   </div>
 </template>
@@ -72,9 +77,5 @@ const { blocks } = defineProps<{ blocks?: CmsBlock[] }>()
 .block-zone {
   display: flex;
   flex-direction: column;
-  gap: var(--space-section);
-}
-.block-zone > :deep(.ribbon) {
-  margin-block: calc(var(--space-section) * -1);
 }
 </style>

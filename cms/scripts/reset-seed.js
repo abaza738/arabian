@@ -20,13 +20,16 @@ const UIDS = [
   'api::destination.destination',
   'api::page.page',
   'api::pilot.pilot',
+  'api::flight.flight',
   // Relation targets
   'api::rank.rank',
+  'api::airport.airport',
   'api::hub.hub',
   'api::category.category',
   // Single types
   'api::global.global',
   'api::about.about',
+  'api::timetable.timetable',
 ]
 
 async function main() {

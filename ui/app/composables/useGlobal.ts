@@ -2,6 +2,7 @@ const POPULATE: CmsPopulate<CmsGlobal> = {
   logo: true,
   favicon: true,
   ctaCards: true,
+  cabinClasses: true,
   socialLinks: true,
   footerLinks: true,
   // Nested media needs naming: `defaultSeo: true` returns the component's text

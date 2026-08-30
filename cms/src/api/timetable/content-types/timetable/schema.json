@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "timetables",
+  "info": {
+    "singularName": "timetable",
+    "pluralName": "timetables",
+    "displayName": "Timetable",
+    "description": "Upload the schedule CSV here and save. Every flight is rebuilt from it"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": false
+    }
+  },
+  "attributes": {
+    "csv": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["files"]
+    },
+    "lastImportedAt": {
+      "type": "datetime"
+    },
+    "lastImportReport": {
+      "type": "text"
+    }
+  }
+}

@@ -89,6 +89,95 @@ Tracked in git on purpose (`cms/.gitignore` un-ignores `data/data.json` and `dat
 
 `data.json` points at relations **by slug**, never by position or database id, and `seed.js`'s `importCollection()` is the one place the create-then-translate loop lives. `reset-seed.js` must learn every new collection, relation-holders first, or a reset orphans it and the next seed duplicates it.
 
+## Timetable (`airport` / `flight` / `timetable`)
+
+The schedule is three content types and one importer, and it is the only part of
+the model an editor loads from a file rather than typing.
+
+- **`airport`** is operational reference data keyed by a unique `icao` — every
+  station the schedule touches. No slug, no route, no draft state. It is *not*
+  `destination`, which is a curated marketing page with a cover, `blocks` and SEO
+  that drives `/network`; nor `hub`, which is where crew and aircraft are based.
+  All three carry an `icao` and that duplication is known: the clean end state is
+  `destination` and `hub` relating to `airport` instead of restating it, which is
+  a refactor of shipped pages and has not been done.
+- **`flight`** is one scheduled leg — `flightNumber`, `callsign`, a
+  `departureAirport`/`arrivalAirport` pair of relations, `departUtc`/`arriveUtc`,
+  `days`, and a free-text `tags`. Named `departureAirport`, never `destination`:
+  a `destination` field pointing at something that is not
+  `api::destination.destination` is a grep trap. **`flightNumber` is not unique** —
+  one number routinely carries several rows with different times and service days.
+- **`timetable`** is a single type whose `csv` media field *is* the admin upload
+  button. No plugin: the editor uploads to the native Media Library field and
+  saves.
+
+**Three rules make the search arithmetic trivial, and all three are load-bearing.**
+
+1. **Every time is Zulu.** No timezone per airport, no DST, so two times compare
+   as minutes-since-midnight with no conversion.
+2. **`days` names the days a flight *departs*.** So `arriveUtc < departUtc` means
+   it lands the next day, and that is the only thing that ever advances a date.
+   Block time is `(arrive - depart + 1440) % 1440`.
+3. **`days` is an SSIM digit string**, ISO numbering — `"136"` is Mon/Wed/Sat.
+   Matching is `days.includes(String(dow))`. The source CSV spells the weekdays
+   out in English; the importer is the one place that mapping lives.
+
+### The importer (`cms/src/api/timetable/content-types/timetable/lifecycles.ts`)
+
+Fires on `afterCreate`/`afterUpdate` of the single type. Four things about it are
+deliberate and easy to undo by accident:
+
+- **It parses CSV properly, not with `split(',')`.** `Service Days` is a quoted
+  comma-bearing field, so a naive split shifts every column right of it and
+  quietly lands a load-factor integer in `callsign`. The tokenizer also handles
+  `""` escapes and newlines inside quotes.
+- **Columns are read by header name, never by position.** Only the seven columns
+  actually consumed are required; the platform can add or reorder the rest
+  (`Fleet IDs`, the `* LF ID`s, `Type`, `Flight Rules`, `Flight Type`,
+  `Allow Callsign Change`) without breaking anything. `Is Hidden` and `_delete`
+  skip the row.
+- **It is all-or-nothing.** One bad row means nothing is written and the errors
+  land in `lastImportReport` with line numbers. A typo must not half-replace a
+  live timetable.
+- **Missing airports are auto-created as ICAO-only stubs**, not rejected. A
+  relation-based import that hard-failed on an unknown target would mean you
+  could not upload a schedule until every station had been hand-entered — the
+  same `ValidationError` trap the seeder documents. Flights are then **replaced
+  wholesale** (the CSV is the source of truth, and duplicate flight numbers make
+  an upsert impossible); airports only ever accumulate.
+
+It also runs on `setImmediate` rather than inside the save, with a module-scoped
+`importing` flag. The flag is what stops the report write-back from re-entering
+the hook; deferring past the transaction is what stops a self-update from
+deadlocking against the admin's own write. The editor refreshes to see the
+report. Several hundred rows are created one at a time — a slow save is why it
+is not awaited.
+
+`cms/data/flights.example.csv` is a real export in the expected format,
+un-ignored narrowly in `cms/.gitignore` the same way `data.json` is.
+
+### The UI side
+
+- **`ui/shared/utils/flightSearch.ts` holds all of it** — pure functions, nothing
+  fetches. `searchDirect` answers with or without a date; `searchOneStop`
+  **requires** one, because the second leg has to operate on the day it actually
+  departs, which is the day the first leg *lands* — one later than the search
+  date whenever the first leg is overnight. Without a date there is no weekday to
+  check it against and every connection would be a guess.
+- **`/flights` is the one list route that does not use `AppEntryFeed`**, on
+  purpose. That component fetches, paginates and re-queries Strapi per filter;
+  this page fetches the whole schedule once (a few hundred rows, ~20 KB) and
+  searches it in the browser, and `AppEntryFeed` has no hook for filtering after
+  the fetch. With no `from`/`to` it renders the entire timetable, so search page
+  and published schedule are one page.
+- **Airports and flights are not localized**, so their reads pass no `locale` and
+  skip `withLocaleFallback` — they are the same rows in every language.
+- Each leg populates **only `icao`** off its two relations; labels are joined
+  client-side from the `Airports` payload the page already holds. `CmsPopulate`
+  grew a nested `fields` for exactly this.
+- The search form is `sections.flight-search`, a dynamiczone component, so an
+  editor places it on the home page rather than a developer hardcoding it.
+
 ## URL convention
 
 Time-stamped content is addressed by `documentId` (`/article/[id]`, `/event/[id]`, `/announcement/[id]`); evergreen content is addressed by slug (`/[slug]`, `/branch/[slug]`, `/programme/[slug]`). New routes also need a line in `ui/server/api/__sitemap__/urls.ts` — `person` and `document` are absent there on purpose, since neither has a route.

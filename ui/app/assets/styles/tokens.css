@@ -49,6 +49,11 @@
 
   --color-overlay: #0a0a088c; /* @ 55% */
 
+  /* The keyboard focus ring, everywhere. An alias rather than a value: it
+     tracks the accent through a rebrand, and a fork whose accent is too pale
+     to read against `--color-surface` repoints just this one. */
+  --color-focus: var(--color-accent);
+
   --color-photo-bg-from: #e4e5e7;
   --color-photo-bg-to: #d6d7da;
 

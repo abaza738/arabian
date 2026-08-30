@@ -7,11 +7,14 @@ type Size = 'sm' | 'md' | 'lg'
 const {
   variant = 'dark',
   size = 'md',
+  type = 'button',
   to,
   href,
 } = defineProps<{
   variant?: Variant
   size?: Size
+  /** Only read when this renders a `<button>`; a link has no type. */
+  type?: 'button' | 'submit'
   /** A path, or any route object — the filter chips pass `{ query }`. */
   to?: RouteLocationRaw
   href?: string
@@ -30,7 +33,7 @@ const tag = computed(() => {
     class="btn"
     :data-variant="variant"
     :data-size="size"
-    :type="to || href ? undefined : 'button'"
+    :type="to || href ? undefined : type"
     v-bind="to ? { to } : href ? { href } : {}"
   >
     <slot />

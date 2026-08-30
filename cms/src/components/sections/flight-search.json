@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_sections_flight_searches",
+  "info": {
+    "displayName": "Flight search",
+    "icon": "search",
+    "description": "The timetable search form: where to, where from, and which day"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "text"
+    }
+  }
+}

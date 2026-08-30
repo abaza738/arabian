@@ -103,6 +103,10 @@ export interface CmsCtaCard extends CmsComponent {
   variant: 'accent' | 'support'
 }
 
+export interface CmsCabinClass extends CmsComponent {
+  label: string
+}
+
 export interface CmsSocialLink extends CmsComponent {
   platform: 'facebook' | 'instagram' | 'x' | 'youtube'
   url: string
@@ -143,6 +147,7 @@ export type CmsBlock =
   | CmsFeedSection
   | CmsStatBandSection
   | CmsCtaBandSection
+  | CmsFlightSearchSection
 
 export interface CmsMediaBlock extends CmsComponent {
   __component: 'shared.media'
@@ -222,6 +227,13 @@ export interface CmsStatBandSection extends CmsComponent {
 export interface CmsCtaBandSection extends CmsComponent {
   __component: 'sections.cta-band'
   cards?: CmsCtaCard[]
+}
+
+export interface CmsFlightSearchSection extends CmsComponent {
+  __component: 'sections.flight-search'
+  eyebrow?: string | null
+  title?: string | null
+  body?: string | null
 }
 
 /* -------------------------------------------------------------------------- */
@@ -349,6 +361,46 @@ export interface CmsAircraft extends CmsEntry {
   seo?: CmsSeo | null
 }
 
+/**
+ * A station the timetable touches, keyed by ICAO.
+ *
+ * Operational reference data, not a page: no slug, no route, no draft state.
+ * The CSV import creates one of these for any ICAO it has not seen, with `icao`
+ * set and every descriptive field still empty — so `name` is optional in a way
+ * `destination.name` is not.
+ */
+export interface CmsAirport extends CmsEntry {
+  icao: string
+  iata?: string | null
+  name?: string | null
+  city?: string | null
+  country?: string | null
+}
+
+/**
+ * One scheduled leg.
+ *
+ * Times are Zulu and the weekdays in `days` are the days it *departs*, so an
+ * `arriveUtc` earlier than `departUtc` means it lands the next day — see
+ * `shared/utils/flightSearch.ts`, which is the only place that arithmetic lives.
+ *
+ * `flightNumber` is not unique: one number routinely carries several rows, each
+ * with its own times and service days.
+ */
+export interface CmsFlight extends CmsEntry {
+  flightNumber: string
+  callsign: string
+  departureAirport?: CmsAirport | null
+  arrivalAirport?: CmsAirport | null
+  /** `"22:45:00.000"` — Strapi widens a `time` past the `HH:MM` the CSV holds. */
+  departUtc: string
+  arriveUtc: string
+  /** ISO weekday digits, `1` = Monday. `"136"` is Mon/Wed/Sat. */
+  days: string
+  /** Free text from the schedule export; usually an aircraft registration. */
+  tags?: string | null
+}
+
 export interface CmsDestination extends CmsEntry {
   name: string
   slug: string
@@ -417,6 +469,7 @@ export interface CmsGlobal extends CmsEntry {
   pilotPortalUrl?: string | null
   pilotPortalLabel?: string | null
   ctaCards?: CmsCtaCard[]
+  cabinClasses?: CmsCabinClass[]
   socialLinks?: CmsSocialLink[]
   footerLinks?: CmsLink[]
   contactEmail?: string | null

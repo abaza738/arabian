@@ -76,7 +76,19 @@ export type CmsPopulate<T> =
   | '*'
   | Array<Exclude<keyof T, symbol>>
   | {
-      [K in keyof T]?: boolean | '*' | { populate?: CmsPopulate<Related<T[K]>> }
+      [K in keyof T]?:
+        | boolean
+        | '*'
+        | {
+            /**
+             * Narrow what comes back off the relation itself. The timetable
+             * populates two airports onto every one of several hundred legs and
+             * needs only their ICAO, so this is the difference between a payload
+             * that is worth fetching whole and one that is not.
+             */
+            fields?: Array<Exclude<keyof Related<T[K]>, symbol>>
+            populate?: CmsPopulate<Related<T[K]>>
+          }
     }
 
 /** Page-based or offset-based; Strapi defaults whichever half is omitted. */
@@ -129,6 +141,8 @@ export interface CmsCollectionMap {
   Announcements: CmsAnnouncement
   Aircrafts: CmsAircraft
   Destinations: CmsDestination
+  Airports: CmsAirport
+  Flights: CmsFlight
   Documents: CmsDocument
   Pages: CmsPage
   Pilots: CmsPilot

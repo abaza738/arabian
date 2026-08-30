@@ -141,6 +141,9 @@ onUnmounted(() => {
         <NuxtLink :to="localePath({ name: 'network' })" class="mega-link">
           {{ t('nav.network') }}
         </NuxtLink>
+        <NuxtLink :to="localePath({ name: 'flights' })" class="mega-link">
+          {{ t('nav.flights') }}
+        </NuxtLink>
         <NuxtLink :to="localePath({ name: 'roster' })" class="mega-link">
           {{ t('nav.roster') }}
         </NuxtLink>

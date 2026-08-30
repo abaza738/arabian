@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "airports",
+  "info": {
+    "singularName": "airport",
+    "pluralName": "airports",
+    "displayName": "Airport",
+    "description": "Every station the timetable touches, keyed by ICAO. Operational reference data, not a page"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": false
+    }
+  },
+  "attributes": {
+    "icao": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 4
+    },
+    "iata": {
+      "type": "string",
+      "maxLength": 3
+    },
+    "name": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "flightsOut": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::flight.flight",
+      "mappedBy": "departureAirport"
+    },
+    "flightsIn": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::flight.flight",
+      "mappedBy": "arrivalAirport"
+    }
+  }
+}

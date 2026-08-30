@@ -1,0 +1,27 @@
+Flight Number,Origin,Destination,Tags,Departure Time (HH:MM),Arrival Time (HH:MM),Service Days,Fleet IDs,Pax LF ID,Pax Luggage LF ID,Cargo LF ID,Cargo Volume LF ID,Callsign,Type,Is Hidden,Flight Rules,Flight Type,Allow Callsign Change,_delete
+X2220,NZCH,NZNV,ZK-ZXA,06:55,08:25,"monday,tuesday,wednesday,thursday,friday,sunday",16300,25261,25262,25263,25265,XZA220,scheduled,False,i,s,False,False
+X2221,NZNV,NZCH,ZK-ZXA,18:10,19:30,"monday,tuesday,wednesday,thursday,saturday,sunday",16300,25261,25262,25263,25265,XZA221,scheduled,False,i,s,False,False
+X2181,NZPM,NZCH,ZK-ZXA,22:45,00:10,"monday,wednesday,saturday",16300,25261,25262,25263,25265,XZA181,scheduled,False,i,s,False,False
+X2170,NZCH,NZNR,ZK-ZXA,20:30,22:00,"tuesday,thursday,sunday",16300,25261,25262,25263,25265,XZA170,scheduled,False,i,s,False,False
+X2171,NZNR,NZCH,ZK-ZXA,22:35,00:10,"tuesday,thursday,sunday",16300,25261,25262,25263,25265,XZA171,scheduled,False,i,s,False,False
+X2221,NZNV,NZCH,ZK-ZXA,20:10,21:30,friday,16300,25261,25262,25263,25265,XZA221,scheduled,False,i,s,False,False
+X2170,NZCH,NZNR,ZK-ZXA,23:00,00:30,friday,16300,25261,25262,25263,25265,XZA170,scheduled,False,i,s,False,False
+X2171,NZNR,NZCH,ZK-ZXA,01:05,02:40,saturday,16300,25261,25262,25263,25265,XZA171,scheduled,False,i,s,False,False
+X2220,NZCH,NZNV,ZK-ZXA,04:35,06:00,saturday,16300,25261,25262,25263,25265,XZA220,scheduled,False,i,s,False,False
+X2212,NZCH,NZDN,ZK-ZXB,01:35,02:55,"monday,tuesday,wednesday,thursday,friday,sunday",16300,25261,25262,25263,25265,XZA212,scheduled,False,i,s,False,False
+X2213,NZDN,NZCH,ZK-ZXB,03:35,04:45,"monday,tuesday,wednesday,thursday,friday,sunday",16300,25261,25262,25263,25265,XZA213,scheduled,False,i,s,False,False
+X2150,NZCH,NZHN,ZK-ZXB,20:30,22:05,"monday,tuesday,wednesday,thursday,saturday,sunday",16300,25261,25262,25263,25265,XZA150,scheduled,False,i,s,False,False
+X2151,NZHN,NZCH,ZK-ZXB,22:40,00:20,"monday,tuesday,wednesday,thursday,saturday,sunday",16300,25261,25262,25263,25265,XZA151,scheduled,False,i,s,False,False
+X2150,NZCH,NZHN,ZK-ZXB,20:45,22:20,friday,16300,25261,25262,25263,25265,XZA150,scheduled,False,i,s,False,False
+X2151,NZHN,NZCH,ZK-ZXB,23:00,00:40,friday,16300,25261,25262,25263,25265,XZA151,scheduled,False,i,s,False,False
+X2122,NZCH,NZWN,ZK-ZXC,01:25,02:30,"monday,tuesday,wednesday,thursday,friday",16300,25261,25262,25263,25265,XZA122,scheduled,False,i,s,False,False
+X2123,NZWN,NZCH,ZK-ZXC,03:10,04:20,"monday,tuesday,wednesday,thursday,friday",16300,25261,25262,25263,25265,XZA123,scheduled,False,i,s,False,False
+X2181,NZPM,NZCH,ZK-ZXC,05:10,06:35,saturday,16300,25261,25262,25263,25265,XZA181,scheduled,False,i,s,False,False
+X2181,NZPM,NZCH,ZK-ZXC,22:55,00:20,saturday,16300,25261,25262,25263,25265,XZA181,scheduled,False,i,s,False,False
+X2181,NZPM,NZCH,ZK-ZXD,03:40,05:05,"monday,wednesday,friday",16300,25261,25262,25263,25265,XZA181,scheduled,False,i,s,False,False
+X2170,NZCH,NZNR,ZK-ZXD,01:25,02:55,"tuesday,thursday,sunday",16300,25261,25262,25263,25265,XZA170,scheduled,False,i,s,False,False
+X2171,NZNR,NZCH,ZK-ZXD,03:30,05:05,"tuesday,thursday,sunday",16300,25261,25262,25263,25265,XZA171,scheduled,False,i,s,False,False
+X2100,NZCH,NZAA,ZK-XZA,20:15,21:55,friday,13433,25261,25262,25263,25265,XZA100,scheduled,False,i,s,False,False
+X2101,NZAA,NZCH,ZK-XZA,22:55,00:40,friday,13433,25261,25262,25263,25265,XZA101,scheduled,False,i,s,False,False
+X2100,NZCH,NZAA,ZK-XZB,20:15,21:55,"monday,tuesday,wednesday,thursday,saturday,sunday",13433,25261,25262,25263,25265,XZA100,scheduled,False,i,s,False,False
+X2101,NZAA,NZCH,ZK-XZB,22:55,00:40,"monday,tuesday,wednesday,thursday,saturday,sunday",13433,25261,25262,25263,25265,XZA101,scheduled,False,i,s,False,False
