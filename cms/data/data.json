@@ -4,7 +4,7 @@
     "siteDescription": "Arabian is a virtual airline flying a regional network across the Middle East. Fly our routes, file your reports, and share the flight deck with crew in every timezone.",
     "wordmarkSub": "Virtual Airline",
     "ribbonTagline": "Every seat filled by someone who wanted to be here.",
-    "location": "Amman, Jordan",
+    "location": "Damascus, Syria",
     "pilotPortalUrl": "",
     "pilotPortalLabel": "",
     "ctaCards": [
@@ -17,11 +17,19 @@
         "variant": "accent"
       }
     ],
-    "socialLinks": [],
-    "footerLinks": [],
-    "contactEmail": "",
+    "socialLinks": [
+      { "platform": "instagram", "url": "https://instagram.com/example" },
+      { "platform": "x", "url": "https://x.com/example" },
+      { "platform": "youtube", "url": "https://youtube.com/@example" }
+    ],
+    "footerLinks": [
+      { "label": "Join the crew", "url": "/join" },
+      { "label": "Contact", "url": "/contact" },
+      { "label": "Questions", "url": "/faq" }
+    ],
+    "contactEmail": "ops@example.com",
     "contactPhone": "",
-    "contactAddress": "",
+    "contactAddress": "Operations Centre, Damascus International Airport (OSDI), Damascus, Syria",
     "showUnassignedInHubViews": false,
     "defaultSeo": {
       "metaTitle": "Arabian — Virtual Airline",
@@ -48,6 +56,12 @@
           "secondaryCta": { "label": "See the fleet", "url": "/fleet" },
           "footnote": "Free to join. Any simulator. Any experience level."
         }
+      },
+      {
+        "__component": "sections.flight-search",
+        "eyebrow": "Dispatch",
+        "title": "Find a sector",
+        "body": "Search the published timetable by airport and day. Direct legs first, one-stop connections when the second leg operates on the day the first one lands."
       },
       {
         "__component": "sections.ribbon",
@@ -128,23 +142,762 @@
 
   "about": {
     "title": "About Arabian",
-    "blocks": [],
-    "history": [],
+    "blocks": [
+      {
+        "__component": "shared.rich-text",
+        "body": "Arabian is a virtual airline. Nobody here sells a ticket, and nobody here is paid. What we run is the paperwork around the flying: a published timetable, a fleet with tail numbers on it, three operating bases, and a roster of people who fly the same sectors in their own simulators and file a report afterwards.\n\nThe idea is simple. Real airlines are interesting because of the constraints — the aircraft has to be where the schedule says it is, the crew has to be legal, the sector has to work at the times printed. Take those constraints seriously and flying a short hop from Damascus to Beirut on a Tuesday morning becomes a thing worth doing properly."
+      },
+      {
+        "__component": "shared.quote",
+        "title": "House rule",
+        "body": "Fly it like the schedule matters. Everything else we can sort out on the ground."
+      },
+      {
+        "__component": "shared.rich-text",
+        "body": "## How it works\n\nPick a hub. Look at the timetable. Fly a sector that departs on a day it actually operates, in whatever simulator you already own, and file the report when the parking brake goes on. That is the whole loop.\n\nThere are no hour requirements, no interview, and no subscription. Ranks exist so there is something to work towards, not as a gate — a cadet and a captain fly the same published schedule."
+      },
+      {
+        "__component": "shared.rich-text",
+        "body": "## Bases\n\nWe operate from three bases. **Damascus (OSDI)** is the founding base and carries the long-haul aircraft. **Baghdad (ORBI)** runs the northern Gulf short-haul network. **Muscat (OOMS)** covers the eastern end of the network and the thinner routes.\n\nEach base has its own aircraft, its own crew and its own news page. You can fly from any of them regardless of which one you signed up at."
+      }
+    ],
+    "history": [
+      {
+        "year": "2019",
+        "title": "Founded at Damascus",
+        "body": "Started as six people, one A320 and a spreadsheet timetable that fitted on a single screen."
+      },
+      {
+        "year": "2021",
+        "title": "First widebody",
+        "body": "The A340-313 arrived and the network stopped being a purely regional one."
+      },
+      {
+        "year": "2023",
+        "title": "Baghdad base opens",
+        "body": "Eight A320s and the northern Gulf short-haul network moved onto their own operating base."
+      },
+      {
+        "year": "2024",
+        "title": "Muscat base opens",
+        "body": "A third base, the A220 fleet, and the thin routes that a 154-seat aircraft could never fill."
+      }
+    ],
     "seo": {
       "metaTitle": "About Arabian",
       "metaDescription": "Who we are, how we fly, and how to join."
     }
   },
 
-  "categories": [],
-  "hubs": [],
-  "ranks": [],
-  "pilots": [],
-  "articles": [],
-  "events": [],
-  "announcements": [],
-  "fleet": [],
-  "destinations": [],
+  "categories": [
+    {
+      "name": "News",
+      "slug": "news",
+      "color": "news",
+      "description": "Announcements from the airline and anything that does not fit the other four."
+    },
+    {
+      "name": "Fleet",
+      "slug": "fleet",
+      "color": "fleet",
+      "description": "Aircraft arriving, leaving, being repainted or being argued about."
+    },
+    {
+      "name": "Network",
+      "slug": "network",
+      "color": "network",
+      "description": "Routes, schedules and the seasonal timetable."
+    },
+    {
+      "name": "Operations",
+      "slug": "operations",
+      "color": "ops",
+      "description": "Procedures, dispatch, and the documents you are supposed to have read."
+    },
+    {
+      "name": "Crew",
+      "slug": "crew",
+      "color": "crew",
+      "description": "The people flying it, and what they have been up to."
+    }
+  ],
+
+  "hubs": [
+    {
+      "name": "Damascus",
+      "slug": "damascus",
+      "icao": "OSDI",
+      "iata": "DAM",
+      "city": "Damascus",
+      "country": "Syria",
+      "timezone": "Asia/Damascus",
+      "intro": "The founding base and the head office. Damascus holds the long-haul fleet, the training department and roughly half the roster. Short-haul out of OSDI reaches Beirut, Amman, Cairo and Istanbul; the widebodies work the Gulf and the overnight rotations.",
+      "email": "damascus@example.com",
+      "location": {
+        "name": "Damascus International Airport",
+        "address": "Damascus International Airport (OSDI)",
+        "city": "Damascus",
+        "mapUrl": "https://www.openstreetmap.org/?mlat=33.4114&mlon=36.5156#map=13/33.4114/36.5156"
+      }
+    },
+    {
+      "name": "Baghdad",
+      "slug": "baghdad",
+      "icao": "ORBI",
+      "iata": "BGW",
+      "city": "Baghdad",
+      "country": "Iraq",
+      "timezone": "Asia/Baghdad",
+      "intro": "Opened in 2023 to take the northern Gulf short-haul network off Damascus. An all-narrowbody base — A320s and A321s working Kuwait, Doha and Jeddah, plus the trunk sector down to Muscat.",
+      "email": "baghdad@example.com",
+      "location": {
+        "name": "Baghdad International Airport",
+        "address": "Baghdad International Airport (ORBI)",
+        "city": "Baghdad",
+        "mapUrl": "https://www.openstreetmap.org/?mlat=33.2625&mlon=44.2346#map=13/33.2625/44.2346"
+      }
+    },
+    {
+      "name": "Muscat",
+      "slug": "muscat",
+      "icao": "OOMS",
+      "iata": "MCT",
+      "city": "Muscat",
+      "country": "Oman",
+      "timezone": "Asia/Muscat",
+      "intro": "The eastern base and home of the A220 fleet. Muscat exists for the routes a 154-seat aircraft could never fill honestly — thin Gulf sectors, early departures, and the overnight down to Jeddah.",
+      "email": "muscat@example.com",
+      "location": {
+        "name": "Muscat International Airport",
+        "address": "Muscat International Airport (OOMS)",
+        "city": "Muscat",
+        "mapUrl": "https://www.openstreetmap.org/?mlat=23.5933&mlon=58.2844#map=13/23.5933/58.2844"
+      }
+    }
+  ],
+
+  "ranks": [
+    { "name": "Cadet", "slug": "cadet", "minHours": 0, "order": 1 },
+    {
+      "name": "First Officer",
+      "slug": "first-officer",
+      "minHours": 50,
+      "order": 2
+    },
+    { "name": "Captain", "slug": "captain", "minHours": 500, "order": 3 }
+  ],
+
+  "pilots": [
+    {
+      "name": "Layla Haddad",
+      "slug": "layla-haddad",
+      "callsign": "ZAR01",
+      "role": "Chief Pilot",
+      "bio": "Flew the first sector on the day the airline opened and has run the training department since. Types on the A320 family and the A340; will argue at length about cost index.",
+      "email": "layla@example.com",
+      "joinedAt": "2019-04-02",
+      "hours": 2400,
+      "order": 1,
+      "rank": "captain",
+      "hub": "damascus"
+    },
+    {
+      "name": "Omar Al-Rashid",
+      "slug": "omar-al-rashid",
+      "callsign": "OIQ01",
+      "role": "Baghdad Base Manager",
+      "bio": "Stood the Baghdad base up from an empty ramp and eight aircraft. Writes most of the network posts, usually at unreasonable hours.",
+      "email": "omar@example.com",
+      "joinedAt": "2020-11-18",
+      "hours": 1810,
+      "order": 2,
+      "rank": "captain",
+      "hub": "baghdad"
+    },
+    {
+      "name": "Nadia Kassem",
+      "slug": "nadia-kassem",
+      "callsign": "ZAR14",
+      "role": "Training First Officer",
+      "bio": "Runs the line checks out of Damascus and maintains the standard operating procedures. Responsible for the fact that anyone reads them.",
+      "email": "nadia@example.com",
+      "joinedAt": "2021-06-09",
+      "hours": 940,
+      "order": 3,
+      "rank": "first-officer",
+      "hub": "damascus"
+    },
+    {
+      "name": "Yusuf Al-Balushi",
+      "slug": "yusuf-al-balushi",
+      "callsign": "OMO07",
+      "role": "Line First Officer",
+      "bio": "Muscat-based and almost exclusively on the A220. Flies the early Gulf rotations because nobody else wants a 05:00 report.",
+      "email": "yusuf@example.com",
+      "joinedAt": "2024-02-21",
+      "hours": 420,
+      "order": 4,
+      "rank": "first-officer",
+      "hub": "muscat"
+    },
+    {
+      "name": "Hasan Tariq",
+      "slug": "hasan-tariq",
+      "callsign": "OIQ22",
+      "role": "Cadet",
+      "bio": "Joined in the last intake at Baghdad. Forty hours in, currently working through the A320 line training syllabus.",
+      "email": "hasan@example.com",
+      "joinedAt": "2025-09-15",
+      "hours": 40,
+      "order": 5,
+      "rank": "cadet",
+      "hub": "baghdad"
+    }
+  ],
+
+  "articles": [
+    {
+      "title": "Winter timetable is published",
+      "slug": "winter-timetable-is-published",
+      "description": "Twenty-seven sectors, three bases, and two overnight rotations that finally make the Gulf turnarounds work.",
+      "publishedDaysAgo": 3,
+      "author": "omar-al-rashid",
+      "category": "network",
+      "hub": "damascus",
+      "blocks": [
+        {
+          "__component": "shared.rich-text",
+          "body": "The winter timetable is live on the dispatch page and it is the first one that treats the three bases as a single network rather than three overlapping ones.\n\nThe headline change is the pair of overnight rotations. OSDI–OMDB now departs at 22:40 and lands at 02:55 the following morning, which puts the aircraft in Dubai in time to work the 04:10 back. The same trick runs at Baghdad on the Jeddah sector. If you have never flown one of these, the arrival day is one later than the departure day — the timetable lists the days a flight *departs*, not the days it lands."
+        },
+        {
+          "__component": "shared.rich-text",
+          "body": "## What changed\n\n- Damascus–Baghdad goes daily, both directions, and becomes the connecting sector for anything routing east.\n- Muscat picks up a second Doha frequency.\n- The morning Beirut departure splits: 06:30 on weekdays, 11:00 at the weekend, same flight number.\n\nEverything else is unchanged from the summer schedule."
+        }
+      ]
+    },
+    {
+      "title": "City of Damascus enters service",
+      "slug": "city-of-damascus-enters-service",
+      "description": "YK-ARA, the first A340-313 in the standard livery, flew its first revenue sector on Tuesday morning.",
+      "publishedDaysAgo": 12,
+      "author": "layla-haddad",
+      "category": "fleet",
+      "hub": "damascus",
+      "blocks": [
+        {
+          "__component": "shared.rich-text",
+          "body": "YK-ARA is on the line. The paint was signed off last week and the aircraft flew its first sector on Tuesday — a deliberately unglamorous OSDI–LTFM and back, chosen because if something is going to be wrong with an aircraft you would rather find out two hours from home than nine.\n\nNothing was wrong with it.\n\nFour CFM56-5C4s, 295 seats, and the first aircraft in the fleet that can leave the region without stopping. It is based at Damascus and will spend most of the winter on the Gulf overnights."
+        },
+        {
+          "__component": "shared.quote",
+          "title": "Layla Haddad, Chief Pilot",
+          "body": "It is a 1990s aeroplane with 1990s systems and it wants to be flown, not supervised. Read the notes before you take one."
+        }
+      ]
+    },
+    {
+      "title": "SOP revision 4.2 is now in force",
+      "slug": "sop-revision-4-2-is-now-in-force",
+      "description": "Crossing restrictions, the stabilised approach gate, and a rewritten section on filing a report after an unusual sector.",
+      "publishedDaysAgo": 27,
+      "author": "nadia-kassem",
+      "category": "operations",
+      "blocks": [
+        {
+          "__component": "shared.rich-text",
+          "body": "Revision 4.2 of the standard operating procedures replaces 4.1 with immediate effect. Three sections changed and one is new.\n\n**Crossing restrictions.** The old wording left it ambiguous whether a hard altitude on a STAR was a target or a limit. It is a limit. If the aircraft cannot make it, say so early rather than diving at it.\n\n**Stabilised approach gate.** Now 1000 ft in instrument conditions and 500 ft visual, matching what most of the roster was already flying.\n\n**Reporting.** The new section covers what to do when a sector goes sideways — a diversion, a return, a technical stop. Short version: file it anyway, and write down what actually happened rather than what should have."
+        }
+      ]
+    },
+    {
+      "title": "Baghdad base passes one thousand sectors",
+      "slug": "baghdad-base-passes-one-thousand-sectors",
+      "description": "Two years after opening with eight A320s and an empty ramp, ORBI has filed its thousandth flight.",
+      "publishedDaysAgo": 41,
+      "author": "omar-al-rashid",
+      "category": "news",
+      "hub": "baghdad",
+      "blocks": [
+        {
+          "__component": "shared.rich-text",
+          "body": "The thousandth sector out of Baghdad was a Kuwait turn on a Thursday morning, flown by a first officer who joined four months ago. That is roughly the right way for it to happen.\n\nWhen the base opened there were eight aircraft, four routes and six people. There are now sixteen aircraft on the ORBI list, the network reaches Doha, Kuwait and Jeddah, and the Muscat trunk sector connects the eastern half of the airline to the western half.\n\nThe A321s arriving over the winter will take the Jeddah overnight off the A320 fleet, which will make the load factors on it considerably less theoretical."
+        }
+      ]
+    },
+    {
+      "title": "Meet the Muscat line",
+      "slug": "meet-the-muscat-line",
+      "description": "The smallest base, the newest aircraft, and the only roster where a 05:00 report is considered normal.",
+      "publishedDaysAgo": 58,
+      "author": "yusuf-al-balushi",
+      "category": "crew",
+      "hub": "muscat",
+      "blocks": [
+        {
+          "__component": "shared.rich-text",
+          "body": "Muscat is the base people forget exists, which is a shame, because it is the one where you actually get to fly.\n\nThe A220 fleet works sectors that would embarrass an A320 — Doha twice a day, the Dubai shuttle, and the overnight down to Jeddah that leaves at 21:00 and lands the next morning. Small aircraft, thin routes, and a roster of about a dozen people who all know each other's callsigns.\n\nIf you are joining and you want to be flying rather than queueing for a slot on the widebody, come here."
+        }
+      ]
+    },
+    {
+      "title": "Ramp works at Damascus through the winter",
+      "slug": "ramp-works-at-damascus-through-the-winter",
+      "description": "Stand allocation at OSDI changes while the eastern apron is resurfaced. Expect longer taxi times.",
+      "publishedDaysAgo": 74,
+      "author": "layla-haddad",
+      "category": "operations",
+      "hub": "damascus",
+      "blocks": [
+        {
+          "__component": "shared.rich-text",
+          "body": "The eastern apron at OSDI is being resurfaced and will be out of use until the spring. Everything moves to the western stands, which adds five to eight minutes of taxi on departure and rather more on arrival if you land on 05L.\n\nThe schedule has not been padded for it. Plan the extra time into your block rather than trying to make it up in the cruise."
+        }
+      ]
+    }
+  ],
+
+  "events": [
+    {
+      "title": "Damascus–Baghdad group flight",
+      "slug": "damascus-baghdad-group-flight",
+      "description": "Fly Z9151 in formation with whoever turns up. A320s and A321s, standard livery, brief thirty minutes before pushback.",
+      "startsInDays": 6,
+      "startsAtTime": "18:00",
+      "endsAtTime": "20:30",
+      "eventStatus": "scheduled",
+      "featured": true,
+      "hub": "damascus",
+      "registrationUrl": "/join",
+      "location": {
+        "name": "Damascus International Airport",
+        "address": "Gate area, Damascus International Airport (OSDI)",
+        "city": "Damascus"
+      },
+      "blocks": [
+        {
+          "__component": "shared.rich-text",
+          "body": "The regular monthly group flight, this time on the sector that ties the two western bases together.\n\nBrief at 17:30 in the crew room. Pushback in sequence from 18:00, separated by two minutes. Cruise FL340, and file the report as Z9151 regardless of what time you actually get airborne.\n\nAny A320 or A321 in the standard livery. If you do not have one, fly it anyway and say so in the report."
+        }
+      ]
+    },
+    {
+      "title": "Night operations training — Muscat",
+      "slug": "night-operations-training-muscat",
+      "description": "Two sectors, both in the dark, both into airports you have probably only seen in daylight.",
+      "startsInDays": 20,
+      "startsAtTime": "20:00",
+      "endsAtTime": "23:00",
+      "eventStatus": "scheduled",
+      "featured": false,
+      "hub": "muscat",
+      "location": {
+        "name": "Muscat International Airport",
+        "address": "Muscat International Airport (OOMS)",
+        "city": "Muscat"
+      },
+      "blocks": [
+        {
+          "__component": "shared.rich-text",
+          "body": "Open to anyone, not just the Muscat roster. Two A220 sectors flown back to back at night, with a debrief between them.\n\nThe point is the approach briefing rather than the flying. Bring the charts."
+        }
+      ]
+    },
+    {
+      "title": "A340-313 familiarisation",
+      "slug": "a340-313-familiarisation",
+      "description": "How to fly a four-engined aeroplane that does not have the thrust you think it has.",
+      "startsInDays": 45,
+      "startsAtTime": "19:00",
+      "endsAtTime": "21:00",
+      "eventStatus": "scheduled",
+      "featured": false,
+      "hub": "damascus",
+      "location": {
+        "name": "Crew room",
+        "address": "Online — link posted the day before",
+        "city": "Damascus"
+      },
+      "blocks": [
+        {
+          "__component": "shared.rich-text",
+          "body": "A walk through the A340-313 for anyone who has not flown one: performance planning, why the takeoff calculation matters more than it does on the A320, and the fuel planning for the Gulf overnights.\n\nNo flying on the night itself. Bring questions."
+        }
+      ]
+    },
+    {
+      "title": "Baghdad base second anniversary fly-in",
+      "slug": "baghdad-base-second-anniversary-fly-in",
+      "description": "Everyone into ORBI from wherever they happened to be. Twenty-two arrivals in ninety minutes.",
+      "startsInDays": -14,
+      "startsAtTime": "17:00",
+      "endsAtTime": "20:00",
+      "eventStatus": "scheduled",
+      "featured": false,
+      "hub": "baghdad",
+      "location": {
+        "name": "Baghdad International Airport",
+        "address": "Baghdad International Airport (ORBI)",
+        "city": "Baghdad"
+      },
+      "blocks": [
+        {
+          "__component": "shared.rich-text",
+          "body": "Twenty-two aircraft arrived at Baghdad inside ninety minutes, which is more than the stand plan strictly allowed for. Thanks to everyone who held for twenty minutes without complaining, and to the four people who diverted to Kuwait and flew back in the following morning."
+        }
+      ]
+    }
+  ],
+
+  "announcements": [
+    {
+      "title": "NOTAM: OSDI runway 05L/23R closed nightly",
+      "slug": "notam-osdi-runway-05l-23r-closed-nightly",
+      "kind": "notam",
+      "pinned": true,
+      "publishedDaysAgo": 2,
+      "expiresInDays": 21,
+      "hub": "damascus",
+      "body": "Runway 05L/23R at Damascus is closed 22:00–04:00Z nightly for resurfacing. All movements in that window use 05R/23L. Expect longer taxi from the western stands and plan an extra eight minutes into the block on departure."
+    },
+    {
+      "title": "Ops bulletin: A321 line entry at Baghdad",
+      "slug": "ops-bulletin-a321-line-entry-at-baghdad",
+      "kind": "ops",
+      "pinned": false,
+      "publishedDaysAgo": 9,
+      "expiresInDays": 45,
+      "hub": "baghdad",
+      "body": "The first A321-231s are arriving at ORBI over the winter. Anyone current on the A320 is current on the A321 for our purposes, but read the performance notes before the first sector — the high-density cabin changes the numbers more than people expect."
+    },
+    {
+      "title": "Roster requests open for the winter schedule",
+      "slug": "roster-requests-open-for-the-winter-schedule",
+      "kind": "notice",
+      "pinned": false,
+      "publishedDaysAgo": 16,
+      "expiresInDays": 30,
+      "body": "Requests for the winter schedule are open until the end of the month. Say which base, which fleet and roughly which days, and we will do what we can. Overnight rotations are allocated first because they are the hardest to fill."
+    }
+  ],
+
+  "fleet": [
+    {
+      "title": "Airbus A320-232",
+      "slug": "yk-uya",
+      "icaoType": "A320",
+      "registration": "YK-UYA",
+      "livery": "Standard",
+      "fleetStatus": "active",
+      "seats": 154,
+      "rangeNm": 3300,
+      "cruiseSpeed": 447,
+      "order": 1,
+      "hub": "damascus",
+      "summary": "‘City of Beirut’ — the Damascus short-haul workhorse. Two IAE V2527-A5s, 28 premium and 126 economy seats.",
+      "blocks": [
+        {
+          "__component": "shared.rich-text",
+          "body": "The aircraft most of the roster will fly most of the time. YK-UYA works the western short-haul network out of Damascus — Beirut, Amman, Cairo and the Baghdad trunk — and turns around fast enough to do four sectors in a day when the schedule asks for it.\n\nCabin is 28 premium and 126 economy, which is the standard configuration across the A320 fleet at every base."
+        }
+      ]
+    },
+    {
+      "title": "Airbus A321-231",
+      "slug": "yi-bbe",
+      "icaoType": "A321",
+      "registration": "YI-BBE",
+      "livery": "Standard",
+      "fleetStatus": "incoming",
+      "seats": 220,
+      "rangeNm": 3200,
+      "cruiseSpeed": 447,
+      "order": 2,
+      "hub": "baghdad",
+      "summary": "‘City of Hillah’ — high-density A321 joining the Baghdad base over the winter. Paint not yet complete.",
+      "blocks": [
+        {
+          "__component": "shared.rich-text",
+          "body": "The first of the high-density A321s for Baghdad. Two IAE V2533-A5s and 220 seats in a single class, intended for the Jeddah overnight and the Doha frequencies where the A320 has been running full.\n\nStill in the paint shop. It will show as incoming until the livery is signed off and it flies its first line sector."
+        }
+      ]
+    },
+    {
+      "title": "Airbus A220-100",
+      "slug": "a4o-ca",
+      "icaoType": "BCS1",
+      "registration": "A4O-CA",
+      "livery": "Standard",
+      "fleetStatus": "active",
+      "seats": 110,
+      "rangeNm": 3400,
+      "cruiseSpeed": 447,
+      "order": 3,
+      "hub": "muscat",
+      "summary": "‘City of Salalah’ — the Muscat thin-route aircraft. Two PW1524G-3s and 110 seats.",
+      "blocks": [
+        {
+          "__component": "shared.rich-text",
+          "body": "The A220 is at Muscat because the eastern network has routes that a 154-seat aircraft cannot fill honestly. A4O-CA works Doha, the Dubai shuttle and the Jeddah overnight, and it does the last one on less fuel than an A320 needs to get halfway.\n\nGeared turbofans, a quiet flight deck, and the best cruise economics in the fleet."
+        }
+      ]
+    },
+    {
+      "title": "Airbus A340-313",
+      "slug": "yk-ara",
+      "icaoType": "A343",
+      "registration": "YK-ARA",
+      "livery": "Standard",
+      "fleetStatus": "active",
+      "seats": 295,
+      "rangeNm": 7300,
+      "cruiseSpeed": 475,
+      "order": 4,
+      "hub": "damascus",
+      "summary": "‘City of Damascus’ — the first widebody in the fleet. Four CFM56-5C4s, 295 seats, based at OSDI.",
+      "blocks": [
+        {
+          "__component": "shared.rich-text",
+          "body": "YK-ARA is the aircraft that stopped Arabian being a purely regional airline. Four CFM56-5C4s, 295 seats and the range to leave the region without a fuel stop.\n\nIt spends the winter on the Gulf overnight rotations out of Damascus. It is a 1990s aeroplane with 1990s systems and it is not overpowered — read the performance notes before the first sector."
+        },
+        {
+          "__component": "shared.quote",
+          "title": "Fleet note",
+          "body": "Takeoff performance is the thing people get wrong. Do the calculation properly; it will not save you if you do not."
+        }
+      ]
+    }
+  ],
+
+  "destinations": [
+    {
+      "name": "Beirut",
+      "slug": "beirut",
+      "icao": "OLBA",
+      "iata": "BEY",
+      "city": "Beirut",
+      "country": "Lebanon",
+      "latitude": 33.8209,
+      "longitude": 35.4884,
+      "order": 1,
+      "summary": "Fifty minutes from Damascus and the shortest sector on the network. Twice daily, both directions.",
+      "blocks": [
+        {
+          "__component": "shared.rich-text",
+          "body": "The shortest sector we operate — barely fifty minutes gate to gate, which means the cabin service is finished before the top of descent and the crew do it four times a day.\n\nRafic Hariri International sits on the coast with the approach over the water. Worth flying at least once at sunset."
+        }
+      ]
+    },
+    {
+      "name": "Amman",
+      "slug": "amman",
+      "icao": "OJAI",
+      "iata": "AMM",
+      "city": "Amman",
+      "country": "Jordan",
+      "latitude": 31.7226,
+      "longitude": 35.9932,
+      "order": 2,
+      "summary": "Queen Alia International, daily from Damascus. An hour and ten, and a desert approach that catches people out.",
+      "blocks": [
+        {
+          "__component": "shared.rich-text",
+          "body": "An hour and ten from OSDI, daily. Queen Alia sits on high desert south of the city and the approach is a good deal less forgiving in summer than the runway length suggests — density altitude is a real number here, not a footnote."
+        }
+      ]
+    },
+    {
+      "name": "Cairo",
+      "slug": "cairo",
+      "icao": "HECA",
+      "iata": "CAI",
+      "city": "Cairo",
+      "country": "Egypt",
+      "latitude": 30.1219,
+      "longitude": 31.4056,
+      "order": 3,
+      "summary": "The busiest airport on the network and the one where the ground frequency will keep you honest.",
+      "blocks": [
+        {
+          "__component": "shared.rich-text",
+          "body": "Daily from Damascus, just under two hours. Cairo International is the busiest field we serve and the taxi in can take longer than the descent. Have the airport chart open before you land, not after."
+        }
+      ]
+    },
+    {
+      "name": "Dubai",
+      "slug": "dubai",
+      "icao": "OMDB",
+      "iata": "DXB",
+      "city": "Dubai",
+      "country": "United Arab Emirates",
+      "latitude": 25.2532,
+      "longitude": 55.3657,
+      "order": 4,
+      "summary": "Served overnight from Damascus and twice daily from Muscat. The busiest arrival sequence you will fly.",
+      "blocks": [
+        {
+          "__component": "shared.rich-text",
+          "body": "Two very different operations to the same airport. The Muscat shuttle is a seventy-minute hop flown four times a day; the Damascus sector is an overnight that departs at 22:40 and lands at 02:55 local the following morning.\n\nIf you are arriving at dawn, expect to be number fifteen."
+        }
+      ]
+    },
+    {
+      "name": "Doha",
+      "slug": "doha",
+      "icao": "OTHH",
+      "iata": "DOH",
+      "city": "Doha",
+      "country": "Qatar",
+      "latitude": 25.2731,
+      "longitude": 51.6081,
+      "order": 5,
+      "summary": "From Baghdad and Muscat both. Hamad International, long runways, no excuses.",
+      "blocks": [
+        {
+          "__component": "shared.rich-text",
+          "body": "Doha is served from two bases: Baghdad once daily and Muscat twice. Hamad International has more runway than anything we operate needs, which makes it the field of choice for anyone flying a type for the first time."
+        }
+      ]
+    },
+    {
+      "name": "Jeddah",
+      "slug": "jeddah",
+      "icao": "OEJN",
+      "iata": "JED",
+      "city": "Jeddah",
+      "country": "Saudi Arabia",
+      "latitude": 21.6796,
+      "longitude": 39.1565,
+      "order": 6,
+      "summary": "Two overnight rotations, one from Baghdad and one from Muscat. Both land the following morning.",
+      "blocks": [
+        {
+          "__component": "shared.rich-text",
+          "body": "The hardest sectors on the network to crew, because both of them depart late and land the next day. Baghdad goes at 23:30 and arrives 03:10; Muscat goes at 21:00 and arrives 00:40.\n\nThe timetable lists the days each flight *departs*. Check which day you actually arrive before you plan the return."
+        }
+      ]
+    },
+    {
+      "name": "Kuwait",
+      "slug": "kuwait",
+      "icao": "OKBK",
+      "iata": "KWI",
+      "city": "Kuwait City",
+      "country": "Kuwait",
+      "latitude": 29.2266,
+      "longitude": 47.9689,
+      "order": 7,
+      "summary": "A sixty-five minute turn from Baghdad, flown every morning and back before lunch.",
+      "blocks": [
+        {
+          "__component": "shared.rich-text",
+          "body": "The shortest sector on the Baghdad roster and usually a new first officer's first line flight. Out at 06:00, back on the ground at ORBI by 09:05."
+        }
+      ]
+    },
+    {
+      "name": "Istanbul",
+      "slug": "istanbul",
+      "icao": "LTFM",
+      "iata": "IST",
+      "city": "Istanbul",
+      "country": "Türkiye",
+      "latitude": 41.2753,
+      "longitude": 28.7519,
+      "order": 8,
+      "summary": "The longest narrowbody sector out of Damascus and the northern edge of the network.",
+      "blocks": [
+        {
+          "__component": "shared.rich-text",
+          "body": "Two hours five northbound and a little longer coming home against the wind. Istanbul Airport is enormous, the taxi is long, and the northern edge of the route network sits here until somebody argues successfully for Europe."
+        }
+      ]
+    }
+  ],
+
   "documents": [],
-  "pages": []
+
+  "pages": [
+    {
+      "title": "Join the crew",
+      "slug": "join",
+      "showInMenu": true,
+      "menuOrder": 1,
+      "seo": {
+        "metaTitle": "Join the crew — Arabian",
+        "metaDescription": "How to join Arabian, what you need, and what happens after you sign up."
+      },
+      "blocks": [
+        {
+          "__component": "sections.hero",
+          "showScene": false,
+          "hero": {
+            "greeting": "New here",
+            "headline": "Join the crew.",
+            "body": "No hour requirements, no interview, no subscription. Pick a base, fly a sector from the published timetable, file the report.",
+            "primaryCta": { "label": "See the timetable", "url": "/flights" },
+            "secondaryCta": { "label": "Browse the fleet", "url": "/fleet" },
+            "footnote": "Any simulator. Any experience level."
+          }
+        },
+        {
+          "__component": "shared.rich-text",
+          "body": "## What you need\n\nA flight simulator you already own, and an aircraft roughly matching something on the fleet list. Roughly is genuinely fine — if you have an A320 of any sort you can fly every narrowbody sector on the network.\n\nThat is the whole list. There is no minimum hours requirement and no test.\n\n## How to sign up\n\nEmail the base you want to fly from — the addresses are on each base page — with the name and callsign you would like. You will be a cadet at that base, on the A320 fleet, within a day or so.\n\n## What happens next\n\nPick any sector from the published timetable that operates on the day you want to fly it. Fly it. File a report. Repeat until you have fifty hours, at which point you become a first officer and nothing much changes except the badge."
+        },
+        {
+          "__component": "sections.cta-band",
+          "cards": [
+            {
+              "eyebrow": "First",
+              "title": "Look at the timetable",
+              "body": "Twenty-seven sectors across three bases. Find one that departs on a day you can fly.",
+              "buttonLabel": "Open the timetable",
+              "buttonUrl": "/flights",
+              "variant": "accent"
+            },
+            {
+              "eyebrow": "Then",
+              "title": "Pick a base",
+              "body": "Damascus, Baghdad or Muscat. You can fly from any of them afterwards regardless.",
+              "buttonLabel": "Read about us",
+              "buttonUrl": "/about",
+              "variant": "support"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Contact",
+      "slug": "contact",
+      "showInMenu": true,
+      "menuOrder": 2,
+      "seo": {
+        "metaTitle": "Contact — Arabian",
+        "metaDescription": "How to reach the airline, and which address to use for what."
+      },
+      "blocks": [
+        {
+          "__component": "shared.rich-text",
+          "body": "## General and operations\n\n`ops@example.com` reaches the operations desk and is the right address for anything about the schedule, the fleet or a report you have filed.\n\n## Bases\n\nEach base handles its own joining requests and its own roster:\n\n- Damascus — `damascus@example.com`\n- Baghdad — `baghdad@example.com`\n- Muscat — `muscat@example.com`\n\n## Anything else\n\nUse the operations address and it will find its way to whoever is supposed to answer it."
+        }
+      ]
+    },
+    {
+      "title": "Questions",
+      "slug": "faq",
+      "showInMenu": true,
+      "menuOrder": 3,
+      "seo": {
+        "metaTitle": "Questions — Arabian",
+        "metaDescription": "The things people ask before joining, answered."
+      },
+      "blocks": [
+        {
+          "__component": "shared.rich-text",
+          "body": "## Does it cost anything?\n\nNo. There is no subscription and nothing to buy.\n\n## Do I need a specific simulator?\n\nNo. Fly whatever you already have.\n\n## Do I need the exact aircraft?\n\nNo. If you have an A320 of some description you can fly every narrowbody sector on the network. Say what you actually flew in the report.\n\n## Are there minimum hours?\n\nNo. Fly as much or as little as you like. Ranks exist so there is something to work towards, not as a requirement.\n\n## What does 'the days a flight departs' mean?\n\nThe timetable lists the days each flight leaves, not the days it arrives. Three sectors on the network depart at night and land the following morning — if you are connecting off one of those, the second leg operates on the day the first one *lands*.\n\n## Can I fly from a base I did not join at?\n\nYes. The base decides where your name sits on the roster and nothing else."
+        }
+      ]
+    }
+  ]
 }
